@@ -128,7 +128,7 @@ fn smoke_rwa_token() {
         (
             admin.clone(),
             7u32,
-            String::from_str(&env, "Veritoken RWA"),
+            String::from_str(&env, "AstraLedger RWA"),
             String::from_str(&env, "VTRWA"),
             String::from_str(&env, "property"),
             kyc_id.clone(),
@@ -138,7 +138,7 @@ fn smoke_rwa_token() {
     );
     let token = RwaTokenClient::new(&env, &token_id);
 
-    assert_eq!(token.name(), String::from_str(&env, "Veritoken RWA"));
+    assert_eq!(token.name(), String::from_str(&env, "AstraLedger RWA"));
     assert_eq!(token.symbol(), String::from_str(&env, "VTRWA"));
     assert_eq!(token.decimals(), 7);
     assert_eq!(token.total_supply(), 0);
@@ -182,7 +182,7 @@ fn smoke_property_token() {
     );
     let token = PropertyTokenClient::new(&env, &token_id);
 
-    assert_eq!(token.name(), String::from_str(&env, "Veritoken Property"));
+    assert_eq!(token.name(), String::from_str(&env, "AstraLedger Property"));
     assert_eq!(token.symbol(), String::from_str(&env, "VTPROP"));
     assert_eq!(token.decimals(), 0);
     assert_eq!(token.total_shares(), 1_000);
@@ -272,7 +272,7 @@ fn smoke_carbon_credit_token() {
     );
     let token = CarbonCreditTokenClient::new(&env, &token_id);
 
-    assert_eq!(token.name(), String::from_str(&env, "Veritoken Carbon Credit"));
+    assert_eq!(token.name(), String::from_str(&env, "AstraLedger Carbon Credit"));
     assert_eq!(token.total_supply(), 0);
     assert_eq!(token.total_retired(), 0);
 

@@ -79,7 +79,7 @@ const CTORS: { [K in ClientKey]: ClientCtor<K> } = {
 export interface CreateClientsConfig {
   /**
    * Network to target when `server` is not injected. Falls back to
-   * `VERITOKEN_NETWORK` / `STELLAR_NETWORK` / `VITE_STELLAR_NETWORK`, then
+   * `ASTRALEDGER_NETWORK` / `STELLAR_NETWORK` / `VITE_STELLAR_NETWORK`, then
    * "testnet" — see `resolveNetworkConfig` in network.ts. @default "testnet"
    */
   network?: Network;

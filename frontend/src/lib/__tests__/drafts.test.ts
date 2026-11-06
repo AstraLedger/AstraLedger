@@ -80,7 +80,7 @@ describe("drafts store", () => {
 
   it("persists drafts to localStorage under the expected key", () => {
     saveDraft("deploy:invoice", { name: "Acme" });
-    const raw = localStorage.getItem("veritoken-drafts");
+    const raw = localStorage.getItem("astraledger-drafts");
     expect(raw).toBeTruthy();
     const parsed = JSON.parse(raw as string);
     expect(parsed.state.drafts["deploy:invoice"].values).toEqual({ name: "Acme" });

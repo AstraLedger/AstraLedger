@@ -1,6 +1,6 @@
 # Incident Response Runbook
 
-This runbook covers the five most likely operational incidents for a Veritoken deployment. Each section contains exact CLI commands. The emergency pause procedure is designed to be executable in under 5 minutes.
+This runbook covers the five most likely operational incidents for a AstraLedger deployment. Each section contains exact CLI commands. The emergency pause procedure is designed to be executable in under 5 minutes.
 
 Keep a copy of this document and your admin key accessible offline (e.g. printed, or in a password manager with offline access) — you will not have time to look things up during a live incident.
 
@@ -56,7 +56,7 @@ stellar contract invoke \
 
 ### Via the Admin Frontend
 
-1. Open the Veritoken frontend and navigate to **Admin**.
+1. Open the AstraLedger frontend and navigate to **Admin**.
 2. Under **Emergency Controls**, click **Pause All Transfers**.
 3. Confirm in the dialog. The button calls `compliance-engine::pause()`.
 4. The "Compliance Rules" panel will reload and show `paused: true`.
@@ -393,22 +393,22 @@ stellar contract invoke \
 Post to all official channels (project Discord/Telegram/Twitter/email list):
 
 ```
-[VERITOKEN NOTICE — <DATE> <TIME> UTC]
+[ASTRALEDGER NOTICE — <DATE> <TIME> UTC]
 
-We are investigating an issue with the Veritoken contracts on <NETWORK>.
+We are investigating an issue with the AstraLedger contracts on <NETWORK>.
 
 As a precautionary measure, all token transfers have been paused.
 No funds have been lost. Your token balances are safe.
 
 We will provide an update within 2 hours.
 
-— Veritoken Operations
+— AstraLedger Operations
 ```
 
 ### Resolution notice
 
 ```
-[VERITOKEN UPDATE — <DATE> <TIME> UTC]
+[ASTRALEDGER UPDATE — <DATE> <TIME> UTC]
 
 The issue identified earlier today has been resolved.
 
@@ -424,7 +424,7 @@ Token transfers have been resumed as of <TIME> UTC (ledger <LEDGER_NUMBER>).
 If you were unable to complete a transaction during the pause window,
 please retry. Contact <support@yourdomain.com> with any questions.
 
-— Veritoken Operations
+— AstraLedger Operations
 ```
 
 ### Post-incident

@@ -19,7 +19,7 @@ const SKIP_REASON =
 
 declare global {
   interface Window {
-    __VERITOKEN_TEST__?: {
+    __ASTRALEDGER_TEST__?: {
       pushNotification: (notification: {
         title: string;
         message: string;
@@ -91,7 +91,7 @@ test.describe("Visual regression", () => {
     // Seed a deterministic notification instead of waiting on a live
     // on-chain event + the alert monitor's poll interval (see e2eBridge.ts).
     await page.evaluate(() => {
-      window.__VERITOKEN_TEST__?.pushNotification({
+      window.__ASTRALEDGER_TEST__?.pushNotification({
         title: "Compliance rule violation",
         message: "Playwright visual-regression.spec.ts seeded alert",
         severity: "critical",

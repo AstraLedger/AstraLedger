@@ -1,8 +1,8 @@
 /**
  * Authentication & authorization helpers for admin- and verifier-gated
- * Veritoken operations (#397).
+ * AstraLedger operations (#397).
  *
- * Every write on a Veritoken contract that is restricted to an admin or a
+ * Every write on a AstraLedger contract that is restricted to an admin or a
  * KYC verifier is enforced on-chain via `require_auth()` plus a role check —
  * an unauthorized caller's transaction simulation fails with a Soroban
  * `Unauthorized` (#3) contract error. That round trip (build → simulate →
@@ -24,7 +24,7 @@
  *
  * @example Host application usage
  * ```ts
- * import { KycRegistryClient, withAuth, assertIsVerifier } from "@veritoken/sdk";
+ * import { KycRegistryClient, withAuth, assertIsVerifier } from "@astraledger/sdk";
  *
  * async function approveKyc(kyc: KycRegistryClient, verifier: string, subject: string, signTx: SignTx) {
  *   return withAuth("verifier", verifier, () => assertIsVerifier(kyc, verifier), () =>
@@ -36,7 +36,7 @@
 
 import type { KycRegistryClient } from "./clients/KycRegistryClient.js";
 
-/** Roles recognised across Veritoken's admin/verifier workflows. */
+/** Roles recognised across AstraLedger's admin/verifier workflows. */
 export type Role = "admin" | "verifier";
 
 /**
@@ -68,7 +68,7 @@ export function assertValidAddress(addr: string, role: Role): void {
   }
 }
 
-/** Matches the Soroban `Unauthorized` (#3) contracterror shared by every Veritoken contract. */
+/** Matches the Soroban `Unauthorized` (#3) contracterror shared by every AstraLedger contract. */
 const UNAUTHORIZED_PATTERN = /Unauthorized|Error\(Contract,\s*#3\)/;
 
 /** True when `err`'s message looks like an on-chain Unauthorized contract error. */

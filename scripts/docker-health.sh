@@ -25,7 +25,7 @@ check() {
 }
 
 echo ""
-echo "==> Veritoken Docker stack health check"
+echo "==> AstraLedger Docker stack health check"
 echo ""
 
 # ── Stellar node ──────────────────────────────────────────────────────────
@@ -50,7 +50,7 @@ check "Dev server responding" \
 # ── Summary ───────────────────────────────────────────────────────────────
 echo ""
 if [ "$overall" -eq 0 ]; then
-  echo "All checks passed. The Veritoken stack is ready."
+  echo "All checks passed. The AstraLedger stack is ready."
 else
   echo "One or more checks failed. Check 'docker compose logs' for details."
 fi

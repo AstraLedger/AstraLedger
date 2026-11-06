@@ -1,5 +1,5 @@
 /**
- * OperatorDashboard — real-time monitoring panel for Veritoken operators.
+ * OperatorDashboard — real-time monitoring panel for AstraLedger operators.
  *
  * Surfaces key contract signals in one place:
  *   - Global pause / unpaused state

@@ -43,7 +43,7 @@ fn setup() -> Harness {
         (
             admin.clone(),
             7u32,
-            String::from_str(&env, "Veritoken RWA"),
+            String::from_str(&env, "AstraLedger RWA"),
             String::from_str(&env, "VTRWA"),
             String::from_str(&env, "property"),
             kyc_id.clone(),
@@ -113,7 +113,7 @@ impl Harness {
 fn test_metadata() {
     let h = setup();
     assert_eq!(h.token.decimals(), 7);
-    assert_eq!(h.token.name(), String::from_str(&h.env, "Veritoken RWA"));
+    assert_eq!(h.token.name(), String::from_str(&h.env, "AstraLedger RWA"));
     assert_eq!(h.token.symbol(), String::from_str(&h.env, "VTRWA"));
     assert_eq!(h.token.asset_type(), String::from_str(&h.env, "property"));
     assert_eq!(h.token.total_supply(), 0);
@@ -1328,7 +1328,7 @@ fn test_get_token_export_basic_fields() {
     let h = setup();
     let export = h.token.get_token_export();
 
-    assert_eq!(export.name, String::from_str(&h.env, "Veritoken RWA"));
+    assert_eq!(export.name, String::from_str(&h.env, "AstraLedger RWA"));
     assert_eq!(export.symbol, String::from_str(&h.env, "VTRWA"));
     assert_eq!(export.decimals, 7u32);
     assert_eq!(export.asset_type, String::from_str(&h.env, "property"));
@@ -1812,7 +1812,7 @@ fn test_migrate_schema_legacy_bootstrap() {
         (
             admin.clone(),
             7u32,
-            String::from_str(&env, "Veritoken RWA"),
+            String::from_str(&env, "AstraLedger RWA"),
             String::from_str(&env, "VTRWA"),
             String::from_str(&env, "property"),
             kyc_id.clone(),

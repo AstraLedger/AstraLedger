@@ -1,4 +1,4 @@
-# cargo-audit configuration for Veritoken workspace
+# cargo-audit configuration for AstraLedger workspace
 # https://rustsec.org/
 
 [advisories]

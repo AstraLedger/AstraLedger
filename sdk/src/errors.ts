@@ -4,7 +4,7 @@
  * Every Soroban contract emits numeric #[contracterror] discriminants.
  * This module provides:
  * - Structured ContractError with code, name, and message
- * - Lookup tables for all six Veritoken contracts
+ * - Lookup tables for all six AstraLedger contracts
  * - Error parsing from raw Soroban error strings
  */
 

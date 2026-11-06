@@ -73,13 +73,13 @@ Store secrets in GitHub Actions repository secrets (`Settings → Secrets and va
 - name: Deploy contracts
   env:
     ADMIN_SECRET_KEY: ${{ secrets.ADMIN_SECRET_KEY }}
-  run: bash scripts/deploy.sh veritoken-ci
+  run: bash scripts/deploy.sh astraledger-ci
 ```
 
 ```yaml
 # ❌ Wrong — secret visible in logs and git history
 - name: Deploy contracts
-  run: ADMIN_SECRET_KEY=SABC123... bash scripts/deploy.sh veritoken-ci
+  run: ADMIN_SECRET_KEY=SABC123... bash scripts/deploy.sh astraledger-ci
 ```
 
 ### Local non-Docker
@@ -88,7 +88,7 @@ Store secrets in GitHub Actions repository secrets (`Settings → Secrets and va
 # Export into the current shell session only — not persisted to .bashrc or history
 export ADMIN_SECRET_KEY="SABC..."
 
-bash scripts/deploy.sh veritoken-dev
+bash scripts/deploy.sh astraledger-dev
 
 # Unset after use
 unset ADMIN_SECRET_KEY

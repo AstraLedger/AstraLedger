@@ -30,7 +30,7 @@ export interface GovernanceEntry {
   txHash?: string;
 }
 
-const STORAGE_KEY = "veritoken-governance-log";
+const STORAGE_KEY = "astraledger-governance-log";
 const MAX_ENTRIES = 200;
 
 // ── Storage helpers ───────────────────────────────────────────────────────────

@@ -1,6 +1,6 @@
 # Security Policy
 
-Veritoken handles real-world financial assets on-chain. Security vulnerabilities can result in direct financial loss to token holders. We take all reports seriously and ask that researchers follow this policy.
+AstraLedger handles real-world financial assets on-chain. Security vulnerabilities can result in direct financial loss to token holders. We take all reports seriously and ask that researchers follow this policy.
 
 ---
 
@@ -10,7 +10,7 @@ Veritoken handles real-world financial assets on-chain. Security vulnerabilities
 
 Please report security vulnerabilities through one of the following channels:
 
-- **GitHub Private Advisory (preferred):** [Report a vulnerability](https://github.com/abore9769/Veritoken/security/advisories/new) — GitHub keeps the report private and notifies the maintainers immediately.
+- **GitHub Private Advisory (preferred):** [Report a vulnerability](https://github.com/Muyideen-js/Veritoken/security/advisories/new) — GitHub keeps the report private and notifies the maintainers immediately.
 - **Email:** Send a detailed report to the repository maintainers. You can find contact information on the GitHub profiles of the repository owners.
 
 Include as much of the following as possible in your report:

@@ -7,7 +7,7 @@
  * without re-deriving the package/role table itself.
  */
 
-import { discoverContracts, type ContractDiscoveryReport } from "@veritoken/sdk";
+import { discoverContracts, type ContractDiscoveryReport } from "@astraledger/sdk";
 import { CONTRACT_IDS } from "./stellar";
 import { useNetworkStore } from "./networkStore";
 

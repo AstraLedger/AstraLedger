@@ -1,8 +1,8 @@
 # syntax=docker/dockerfile:1
-# Veritoken development image
+# AstraLedger development image
 # Provides: Rust stable + wasm32 target, Stellar CLI, Node.js 20, project source.
 #
-# Build:  docker build -t veritoken-dev .
+# Build:  docker build -t astraledger-dev .
 # Run:    docker compose up
 #
 # The image is intentionally NOT used for production. It is a local development

@@ -21,7 +21,7 @@ import type { ComplianceRules, TierPolicy, RiskConfig } from "../types";
 
 export const SNAPSHOT_FORMAT_VERSION = 1;
 const MAX_SNAPSHOTS = 25;
-const STORAGE_KEY = "veritoken-snapshots";
+const STORAGE_KEY = "astraledger-snapshots";
 
 export interface AdminSnapshot {
   version: number;

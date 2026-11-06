@@ -1,7 +1,7 @@
 # Troubleshooting Guide
 
 This guide covers the most common problems contributors and operators run into
-when working with Veritoken — from initial setup through contract deployment and
+when working with AstraLedger — from initial setup through contract deployment and
 frontend development. Each entry lists the symptom, the likely cause, and the
 concrete fix.
 
@@ -87,7 +87,7 @@ stellar --version
 peer-dependency mismatch.
 
 **Fix**
-Veritoken requires Node.js ≥ 20. Check your current version:
+AstraLedger requires Node.js ≥ 20. Check your current version:
 ```bash
 node --version
 ```
@@ -237,8 +237,8 @@ error: identity 'alice' not found
 **Fix**
 Create the identity first:
 ```bash
-bash scripts/setup-identity.sh veritoken-dev
-bash scripts/deploy.sh veritoken-dev
+bash scripts/setup-identity.sh astraledger-dev
+bash scripts/deploy.sh astraledger-dev
 ```
 
 ---
@@ -254,7 +254,7 @@ Inspect the reported error and checkpoint, fix the underlying problem, then
 resume the exact run:
 
 ```bash
-DEPLOY_RESUME=1 bash scripts/deploy.sh veritoken-dev
+DEPLOY_RESUME=1 bash scripts/deploy.sh astraledger-dev
 ```
 
 The resume path requires the same identity, network, config hash, and artifacts.
@@ -275,7 +275,7 @@ error: transaction submission failed: insufficient funds
 **Fix**
 Re-fund your testnet account via Friendbot:
 ```bash
-curl "https://friendbot.stellar.org?addr=$(stellar keys address veritoken-dev)"
+curl "https://friendbot.stellar.org?addr=$(stellar keys address astraledger-dev)"
 ```
 
 Each contract deployment costs roughly 1–2 XLM in fees plus ledger entry
@@ -294,7 +294,7 @@ Retry the command. If it fails repeatedly, check the network status at
 different RPC endpoint:
 ```bash
 export STELLAR_RPC_URL=https://soroban-testnet.stellar.org
-bash scripts/deploy.sh veritoken-dev
+bash scripts/deploy.sh astraledger-dev
 ```
 
 ---
@@ -327,8 +327,8 @@ The command exits without output.
 **Fix**
 The key does not exist yet. Generate it:
 ```bash
-stellar keys generate --network testnet veritoken-dev
-stellar keys address veritoken-dev
+stellar keys generate --network testnet astraledger-dev
+stellar keys address astraledger-dev
 ```
 
 ---
@@ -342,7 +342,7 @@ rate-limiting your IP.
 **Fix**
 Check the current balance first:
 ```bash
-stellar account info --network testnet --source veritoken-dev
+stellar account info --network testnet --source astraledger-dev
 ```
 
 If the account already has XLM, no additional funding is needed. If you hit a
@@ -537,7 +537,7 @@ Then update the RPC URL in `frontend/src/lib/stellar.ts` to `/rpc`.
 
 ## 8. CI Failures
 
-### CI fails on `working-directory: Veritoken` but passes locally
+### CI fails on `working-directory: AstraLedger` but passes locally
 
 **Cause**
 CI checks out the repository into a subdirectory named after the repo. Local
@@ -576,7 +576,7 @@ git commit -m "chore: update frontend dependencies"
 
 ## Still stuck?
 
-Open an [issue on GitHub](https://github.com/abore9769/Veritoken/issues) with:
+Open an [issue on GitHub](https://github.com/Muyideen-js/Veritoken/issues) with:
 
 - The exact command you ran
 - The full error output

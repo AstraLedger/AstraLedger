@@ -37,7 +37,7 @@ interface SessionHistoryStore {
   clear: () => void;
 }
 
-const STORAGE_KEY = "veritoken-session-history";
+const STORAGE_KEY = "astraledger-session-history";
 const MAX_ENTRIES = 200;
 
 // ── Store ─────────────────────────────────────────────────────────────────────

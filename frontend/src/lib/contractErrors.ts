@@ -7,9 +7,9 @@ export {
   lookupError,
   parseContractError,
   formatContractError,
-} from "@veritoken/sdk";
+} from "@astraledger/sdk";
 
 export type {
   ContractError,
   ContractName,
-} from "@veritoken/sdk";
+} from "@astraledger/sdk";

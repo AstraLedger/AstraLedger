@@ -1,6 +1,6 @@
 # Deployment Scripts
 
-TypeScript scripts for deploying and verifying Veritoken contracts on Stellar.
+TypeScript scripts for deploying and verifying AstraLedger contracts on Stellar.
 
 ## Prerequisites
 

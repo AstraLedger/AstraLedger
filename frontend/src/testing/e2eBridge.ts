@@ -13,14 +13,14 @@ import { useNotificationStore, type AppNotification } from "../lib/notificationS
 
 declare global {
   interface Window {
-    __VERITOKEN_TEST__?: {
+    __ASTRALEDGER_TEST__?: {
       pushNotification: (notification: Omit<AppNotification, "id" | "timestamp" | "read">) => void;
     };
   }
 }
 
 if (import.meta.env.MODE === "e2e") {
-  window.__VERITOKEN_TEST__ = {
+  window.__ASTRALEDGER_TEST__ = {
     pushNotification: (notification) => useNotificationStore.getState().push(notification),
   };
 }

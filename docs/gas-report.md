@@ -1,6 +1,6 @@
 # Gas and Performance Report
 
-> **Note:** This is a template report. Run `bash scripts/gas-report.sh veritoken-dev`
+> **Note:** This is a template report. Run `bash scripts/gas-report.sh astraledger-dev`
 > after deploying contracts to generate real measurements from your deployment.
 
 Generated: (not yet run)  
@@ -8,7 +8,7 @@ Network: testnet
 
 Regenerate this report at any time:
 ```bash
-bash scripts/gas-report.sh veritoken-dev testnet
+bash scripts/gas-report.sh astraledger-dev testnet
 ```
 
 ---
@@ -90,8 +90,8 @@ cross-contract calls or additional storage reads were introduced.
 
 ```bash
 # After deploying to testnet
-bash scripts/gas-report.sh veritoken-dev testnet
+bash scripts/gas-report.sh astraledger-dev testnet
 
 # With a specific probe address (must have KYC approval)
-PROBE_ADDRESS=G... bash scripts/gas-report.sh veritoken-dev testnet
+PROBE_ADDRESS=G... bash scripts/gas-report.sh astraledger-dev testnet
 ```

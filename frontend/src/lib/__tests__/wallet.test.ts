@@ -161,7 +161,7 @@ describe("useWallet.disconnect", () => {
     await useWallet.getState().connect();
 
     await useWallet.getState().disconnect();
-    expect(localStorageMock.removeItem).toHaveBeenCalledWith("veritoken-wallet-provider");
+    expect(localStorageMock.removeItem).toHaveBeenCalledWith("astraledger-wallet-provider");
   });
 });
 
@@ -213,7 +213,7 @@ describe("useWallet.selectProvider", () => {
     expect(useWallet.getState().providerType).toBe("freighter");
     expect(useWallet.getState().connected).toBe(true);
     expect(localStorageMock.setItem).toHaveBeenCalledWith(
-      "veritoken-wallet-provider",
+      "astraledger-wallet-provider",
       "freighter",
     );
   });

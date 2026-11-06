@@ -16,7 +16,7 @@ export interface AddressBookStore {
   search: (query: string) => AddressEntry[];
 }
 
-const STORAGE_KEY = "veritoken-address-book";
+const STORAGE_KEY = "astraledger-address-book";
 
 export const useAddressBook = create<AddressBookStore>()(
   persist(

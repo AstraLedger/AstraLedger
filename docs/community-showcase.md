@@ -1,14 +1,14 @@
 # Community Showcase
 
-This page collects integrations, extensions, and reference implementations built on top of Veritoken. It is maintained by the project maintainers and updated as the ecosystem grows.
+This page collects integrations, extensions, and reference implementations built on top of AstraLedger. It is maintained by the project maintainers and updated as the ecosystem grows.
 
-If you have built something with Veritoken and would like to be listed here, see [How to contribute an example](#how-to-contribute-an-example) below.
+If you have built something with AstraLedger and would like to be listed here, see [How to contribute an example](#how-to-contribute-an-example) below.
 
 ---
 
 ## Featured Integrations
 
-*This section will grow as the community builds on Veritoken. Be the first to submit an integration — see the contribution guide below.*
+*This section will grow as the community builds on AstraLedger. Be the first to submit an integration — see the contribution guide below.*
 
 | Project | Description | Author | Link |
 |---|---|---|---|
@@ -32,7 +32,7 @@ See [`docs/examples/README.md`](examples/README.md) for setup instructions and h
 
 ## Extension Points
 
-Veritoken is designed to be forked and extended. Common extension patterns include:
+AstraLedger is designed to be forked and extended. Common extension patterns include:
 
 ### New asset types
 
@@ -49,7 +49,7 @@ Add fields to `ComplianceRules` in `compliance-engine` to encode jurisdiction-sp
 
 ### Alternative frontends
 
-The TypeScript SDK (`sdk/`) is framework-agnostic. Any frontend that can import an npm package can use it to interact with deployed Veritoken contracts.
+The TypeScript SDK (`sdk/`) is framework-agnostic. Any frontend that can import an npm package can use it to interact with deployed AstraLedger contracts.
 
 ### Off-chain anchoring
 
@@ -61,7 +61,7 @@ Every asset contract has an IPFS hash field for linking to legal documents. Off-
 
 1. **Fork** the repository and add your example under `docs/examples/` (scripts, client code) or `contracts/` (new asset types).
 2. **Add a row** to the Featured Integrations table above with a short description and a link to your public repository or live demo.
-3. **Open a pull request** against `main`. Maintainers will review and merge contributions that are working, documented, and relevant to the Stellar/Veritoken ecosystem.
+3. **Open a pull request** against `main`. Maintainers will review and merge contributions that are working, documented, and relevant to the Stellar/AstraLedger ecosystem.
 
 Please follow the [contribution guide](../CONTRIBUTING.md) and ensure any contract code passes `cargo test --features testutils` before submitting.
 
@@ -69,6 +69,6 @@ Please follow the [contribution guide](../CONTRIBUTING.md) and ensure any contra
 
 ## Stay Connected
 
-- **Issues** — Feature requests, bug reports, and integration questions: [GitHub Issues](https://github.com/abore9769/Veritoken/issues)
+- **Issues** — Feature requests, bug reports, and integration questions: [GitHub Issues](https://github.com/Muyideen-js/Veritoken/issues)
 - **Security** — Vulnerability disclosures: see [SECURITY.md](../SECURITY.md)
 - **Changelog** — What changed and when: [CHANGELOG.md](../CHANGELOG.md)

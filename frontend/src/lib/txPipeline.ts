@@ -18,10 +18,10 @@ export {
   TimeoutError,
   TransientError,
   isTransientError,
-} from "@veritoken/sdk";
+} from "@astraledger/sdk";
 
 export type {
   PipelineOptions,
   ReadResult,
   WriteResult,
-} from "@veritoken/sdk";
+} from "@astraledger/sdk";

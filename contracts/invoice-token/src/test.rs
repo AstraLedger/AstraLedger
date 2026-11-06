@@ -189,7 +189,7 @@ fn test_metadata() {
     assert_eq!(h.token.decimals(), 7);
     assert_eq!(
         h.token.name(),
-        String::from_str(&h.env, "Veritoken Invoice")
+        String::from_str(&h.env, "AstraLedger Invoice")
     );
     assert_eq!(
         h.token.get_meta(&inv_id(&h.env)).invoice_id,

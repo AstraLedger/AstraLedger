@@ -143,7 +143,7 @@ async function contractExists(
 }
 
 async function main(): Promise<void> {
-  console.log("=== Veritoken Manifest Verification ===");
+  console.log("=== AstraLedger Manifest Verification ===");
   console.log(`Manifest: ${MANIFEST_FILE}`);
   console.log(`RPC URL:  ${RPC_URL}`);
   console.log("");

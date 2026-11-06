@@ -34,7 +34,7 @@ export interface E2EWalletInjection {
 
 declare global {
   interface Window {
-    __VERITOKEN_E2E_WALLET__?: E2EWalletInjection;
+    __ASTRALEDGER_E2E_WALLET__?: E2EWalletInjection;
     freighter?: boolean;
   }
 }
@@ -52,7 +52,7 @@ export async function installFreighterWallet(
   keypair: Keypair,
 ): Promise<void> {
   await context.addInitScript((wallet: E2EWalletInjection) => {
-    window.__VERITOKEN_E2E_WALLET__ = wallet;
+    window.__ASTRALEDGER_E2E_WALLET__ = wallet;
     window.freighter = true;
   }, toInjection(keypair));
 }
@@ -67,7 +67,7 @@ export async function installFreighterWalletOnPage(
   keypair: Keypair,
 ): Promise<void> {
   await page.addInitScript((wallet: E2EWalletInjection) => {
-    window.__VERITOKEN_E2E_WALLET__ = wallet;
+    window.__ASTRALEDGER_E2E_WALLET__ = wallet;
     window.freighter = true;
   }, toInjection(keypair));
 }
@@ -75,7 +75,7 @@ export async function installFreighterWalletOnPage(
 /** Removes the mock wallet so `isConnected()`/`isAvailable()` reports false. */
 export async function uninstallFreighterWallet(context: BrowserContext): Promise<void> {
   await context.addInitScript(() => {
-    delete window.__VERITOKEN_E2E_WALLET__;
+    delete window.__ASTRALEDGER_E2E_WALLET__;
     window.freighter = false;
   });
 }

@@ -1,5 +1,5 @@
 /**
- * Veritoken Event Indexer — entry point.
+ * AstraLedger Event Indexer — entry point.
  *
  * Startup sequence:
  *   1. Load config from env vars.
@@ -20,7 +20,7 @@ import { buildRouter } from "./api/routes.js";
 async function main(): Promise<void> {
   const config = loadConfig();
 
-  console.log("[indexer] Starting Veritoken Event Indexer");
+  console.log("[indexer] Starting AstraLedger Event Indexer");
   console.log(`[indexer] RPC URL:    ${config.rpcUrl}`);
   console.log(`[indexer] Network:    ${config.networkPassphrase.split(";")[0].trim()}`);
   console.log(`[indexer] Poll ms:    ${config.pollIntervalMs}`);
