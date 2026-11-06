@@ -40,7 +40,7 @@ import { SorobanTransport } from "../integration/fixtures/soroban-transport";
 import { createFixtureAccounts, fullDeploymentPlan, WASM_DIR } from "../integration/fixtures/fixture-plans";
 import { writeContractIds, type DeployedContractIds } from "./fixtures/contract-ids";
 
-const CONTAINER_NAME = process.env.E2E_STANDALONE_CONTAINER ?? "veritoken-e2e-standalone";
+const CONTAINER_NAME = process.env.E2E_STANDALONE_CONTAINER ?? "astraledger-e2e-standalone";
 const RPC_PORT = Number(process.env.E2E_RPC_PORT ?? 8000);
 const RPC_URL = `http://localhost:${RPC_PORT}/soroban/rpc`;
 const DEV_SERVER_PORT = Number(process.env.E2E_PORT ?? 5173);

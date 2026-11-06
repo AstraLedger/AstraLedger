@@ -25,7 +25,7 @@ const STEPS: ChecklistStep[] = [
   {
     id: "clone",
     title: "Clone the repository",
-    description: "Fork or clone Veritoken and install frontend dependencies.",
+    description: "Fork or clone AstraLedger and install frontend dependencies.",
   },
   {
     id: "identity",
@@ -174,13 +174,13 @@ export default function OnboardingPage() {
 
                   {/* Special inline code snippets */}
                   {step.id === "clone" && (
-                    <CodeBlock>{`git clone https://github.com/abore9769/Veritoken\ncd Veritoken\nnpm install --prefix frontend`}</CodeBlock>
+                    <CodeBlock>{`git clone https://github.com/Muyideen-js/Veritoken.git AstraLedger\ncd AstraLedger\nnpm install --prefix frontend`}</CodeBlock>
                   )}
                   {step.id === "identity" && (
-                    <CodeBlock>{`bash scripts/setup-identity.sh veritoken-dev`}</CodeBlock>
+                    <CodeBlock>{`bash scripts/setup-identity.sh astraledger-dev`}</CodeBlock>
                   )}
                   {step.id === "deploy" && (
-                    <CodeBlock>{`bash scripts/deploy.sh veritoken-dev`}</CodeBlock>
+                    <CodeBlock>{`bash scripts/deploy.sh astraledger-dev`}</CodeBlock>
                   )}
                   {step.id === "prereqs" && (
                     <CodeBlock>{`rustup target add wasm32-unknown-unknown\ncargo install --locked stellar-cli --features opt`}</CodeBlock>

@@ -1,5 +1,5 @@
 import { TransactionBuilder, rpc, scValToNative } from "@stellar/stellar-sdk";
-import { resolveNetworkConfig } from "@veritoken/sdk";
+import { resolveNetworkConfig } from "@astraledger/sdk";
 import { useNetworkStore } from "./networkStore";
 import type { ContractEvent } from "../types";
 

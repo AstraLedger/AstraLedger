@@ -1,7 +1,7 @@
 # Storage Layout Reference
 
 This document is the canonical record of every persistent storage key used
-across the Veritoken smart contracts.  It must be updated — in the same PR —
+across the AstraLedger smart contracts.  It must be updated — in the same PR —
 whenever a key is added, renamed, or removed.
 
 ---

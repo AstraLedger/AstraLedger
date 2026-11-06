@@ -9,7 +9,7 @@
  *   useEffect(() => startComplianceAlertMonitor(), []);
  */
 
-import { alertForComplianceEvent, ViolationTracker, type Alert } from "@veritoken/sdk";
+import { alertForComplianceEvent, ViolationTracker, type Alert } from "@astraledger/sdk";
 import { fetchContractEvents, CONTRACT_IDS } from "./stellar";
 import { useNotificationStore, type NotificationCategory } from "./notificationStore";
 

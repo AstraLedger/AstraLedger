@@ -29,7 +29,7 @@ export const wasmPath = (filename: string): string =>
 
 const deterministicKeypair = (label: string): Keypair =>
   Keypair.fromRawEd25519Seed(
-    createHash("sha256").update(`veritoken-fixture:${label}`).digest(),
+    createHash("sha256").update(`astraledger-fixture:${label}`).digest(),
   );
 
 export const createFixtureAccounts = (): FixtureAccounts => ({
@@ -157,7 +157,7 @@ const rwaStep = {
   constructorArgs: (context) => [
     accountAddress(context.account("admin")),
     xdr.ScVal.scvU32(7),
-    xdr.ScVal.scvString("Veritoken RWA"),
+    xdr.ScVal.scvString("AstraLedger RWA"),
     xdr.ScVal.scvString("VTRWA"),
     xdr.ScVal.scvString("property"),
     contractAddress(context.contract("kyc")),
@@ -332,7 +332,7 @@ const propertyStep = {
       ipfsTitleHash: "",
       jurisdiction: "US",
       kycTierRequired: 0,
-      legalName: "Veritoken Property Holdings LLC",
+      legalName: "AstraLedger Property Holdings LLC",
       propertyId: "PROP-001",
       propertyType: "commercial",
       totalShares: "1000000",
@@ -362,7 +362,7 @@ export const propertyFixturePlan = (): FixturePlan => ({
 });
 
 /**
- * Deploys all six Veritoken contracts in one fixture — used by the E2E suite
+ * Deploys all six AstraLedger contracts in one fixture — used by the E2E suite
  * (tests/e2e/global-setup.ts), which needs every contract ID populated before
  * the frontend dev server boots (main.tsx refuses to render without them).
  */

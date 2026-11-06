@@ -112,7 +112,7 @@ export default function Dashboard() {
           compliant from the first block.
         </h1>
         <p className="muted" style={styles.heroSub}>
-          Veritoken is a plug-and-play kit for launching tokenized invoices, property
+          AstraLedger is a plug-and-play kit for launching tokenized invoices, property
           shares, and carbon credits on Stellar — with KYC and transfer compliance
           enforced at the protocol level, not bolted on after the fact.
         </p>

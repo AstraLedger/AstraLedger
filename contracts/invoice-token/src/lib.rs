@@ -356,7 +356,7 @@ impl InvoiceToken {
 
     pub fn name(env: Env) -> String {
         env.storage().instance().extend_ttl(THRESHOLD, BUMP);
-        String::from_str(&env, "Veritoken Invoice")
+        String::from_str(&env, "AstraLedger Invoice")
     }
     pub fn symbol(env: Env) -> String {
         env.storage().instance().extend_ttl(THRESHOLD, BUMP);

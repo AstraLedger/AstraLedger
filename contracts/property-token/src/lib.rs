@@ -324,7 +324,7 @@ impl PropertyToken {
 
     pub fn name(env: Env) -> String {
         env.storage().instance().extend_ttl(THRESHOLD, BUMP);
-        String::from_str(&env, "Veritoken Property")
+        String::from_str(&env, "AstraLedger Property")
     }
     pub fn symbol(env: Env) -> String {
         env.storage().instance().extend_ttl(THRESHOLD, BUMP);

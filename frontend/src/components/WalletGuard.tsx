@@ -65,7 +65,7 @@ export default function WalletGuard({
 
           // Persist the type for auto-reconnect.
           try {
-            localStorage.setItem("veritoken-wallet-provider", "walletconnect");
+            localStorage.setItem("astraledger-wallet-provider", "walletconnect");
           } catch {
             // Ignore
           }

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# check-wasm-size.sh — enforce the Veritoken contract size budget.
+# check-wasm-size.sh — enforce the AstraLedger contract size budget.
 #
 # Usage:
 #   bash scripts/check-wasm-size.sh [--wasm-dir <path>]

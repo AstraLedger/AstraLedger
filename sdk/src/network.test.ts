@@ -11,16 +11,16 @@ import {
 } from "./network.js";
 
 const ENV_KEYS = [
-  "VERITOKEN_NETWORK",
+  "ASTRALEDGER_NETWORK",
   "STELLAR_NETWORK",
   "VITE_STELLAR_NETWORK",
-  "VERITOKEN_RPC_URL",
+  "ASTRALEDGER_RPC_URL",
   "SOROBAN_RPC_URL",
   "VITE_SOROBAN_RPC_URL",
-  "VERITOKEN_NETWORK_PASSPHRASE",
+  "ASTRALEDGER_NETWORK_PASSPHRASE",
   "STELLAR_NETWORK_PASSPHRASE",
   "VITE_STELLAR_NETWORK_PASSPHRASE",
-  "VERITOKEN_RPC_ALLOW_HTTP",
+  "ASTRALEDGER_RPC_ALLOW_HTTP",
 ];
 
 function clearEnv() {
@@ -84,9 +84,9 @@ describe("resolveNetworkConfig", () => {
     expect(config.network).toBe("testnet");
   });
 
-  it("respects env var priority order (VERITOKEN_NETWORK beats STELLAR_NETWORK)", () => {
+  it("respects env var priority order (ASTRALEDGER_NETWORK beats STELLAR_NETWORK)", () => {
     process.env.STELLAR_NETWORK = "mainnet";
-    process.env.VERITOKEN_NETWORK = "futurenet";
+    process.env.ASTRALEDGER_NETWORK = "futurenet";
     const config = resolveNetworkConfig();
     expect(config.network).toBe("futurenet");
   });
@@ -104,7 +104,7 @@ describe("resolveNetworkConfig", () => {
   });
 
   it("reads allowHttp from an environment variable", () => {
-    process.env.VERITOKEN_RPC_ALLOW_HTTP = "true";
+    process.env.ASTRALEDGER_RPC_ALLOW_HTTP = "true";
     const config = resolveNetworkConfig({ network: "testnet" });
     expect(config.allowHttp).toBe(true);
   });
@@ -213,8 +213,8 @@ describe("resolveNetworkConfig", () => {
   });
 
   it("resolves a custom network's rpcUrl/networkPassphrase from environment variables", () => {
-    process.env.VERITOKEN_RPC_URL = "https://rpc.from-env.internal";
-    process.env.VERITOKEN_NETWORK_PASSPHRASE = "From Env ; 2026";
+    process.env.ASTRALEDGER_RPC_URL = "https://rpc.from-env.internal";
+    process.env.ASTRALEDGER_NETWORK_PASSPHRASE = "From Env ; 2026";
     const config = resolveNetworkConfig({ network: "my-private-devnet" });
     expect(config.rpcUrl).toBe("https://rpc.from-env.internal");
     expect(config.networkPassphrase).toBe("From Env ; 2026");

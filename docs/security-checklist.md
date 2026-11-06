@@ -1,7 +1,7 @@
 # Security Review Checklist and Hardening Playbook
 
 This document provides a structured checklist for performing internal and
-external security reviews of Veritoken contracts and frontend. Each item is
+external security reviews of AstraLedger contracts and frontend. Each item is
 specific to the current architecture. Use it before any mainnet deployment,
 after significant contract changes, and as a briefing document for external
 auditors.

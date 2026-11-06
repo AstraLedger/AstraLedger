@@ -58,9 +58,9 @@
         "kyc_registry": "${contract.kyc_registry}",
         "compliance_engine": "${contract.compliance_engine}",
         "meta": {
-          "invoice_id": "VERITOKEN-TEST-001",
-          "issuer": "Veritoken Test Issuer",
-          "debtor": "Veritoken Test Debtor",
+          "invoice_id": "ASTRALEDGER-TEST-001",
+          "issuer": "AstraLedger Test Issuer",
+          "debtor": "AstraLedger Test Debtor",
           "face_value_usd": 10000000,
           "discount_rate_bps": 0,
           "due_date": 4102444800,
@@ -74,12 +74,12 @@
       "declared_metadata": {
         "package": "invoice-token",
         "role": "invoice_asset",
-        "fixture_invoice_id": "VERITOKEN-TEST-001"
+        "fixture_invoice_id": "ASTRALEDGER-TEST-001"
       },
       "health_check": {
         "function": "total_supply",
         "args": {
-          "invoice_id": "VERITOKEN-TEST-001"
+          "invoice_id": "ASTRALEDGER-TEST-001"
         },
         "expectation": "integer"
       }
@@ -98,8 +98,8 @@
         "kyc_registry": "${contract.kyc_registry}",
         "compliance_engine": "${contract.compliance_engine}",
         "meta": {
-          "property_id": "VERITOKEN-TEST-PROPERTY-001",
-          "legal_name": "Veritoken Test Property LLC",
+          "property_id": "ASTRALEDGER-TEST-PROPERTY-001",
+          "legal_name": "AstraLedger Test Property LLC",
           "jurisdiction": "US",
           "address": "Testnet fixture only",
           "total_valuation_usd": 10000000,
@@ -112,7 +112,7 @@
       "declared_metadata": {
         "package": "property-token",
         "role": "property_asset",
-        "fixture_property_id": "VERITOKEN-TEST-PROPERTY-001"
+        "fixture_property_id": "ASTRALEDGER-TEST-PROPERTY-001"
       },
       "health_check": {
         "function": "total_shares",
@@ -133,10 +133,10 @@
         "kyc_registry": "${contract.kyc_registry}",
         "compliance_engine": "${contract.compliance_engine}",
         "meta": {
-          "project_id": "VERITOKEN-TEST-CARBON-001",
+          "project_id": "ASTRALEDGER-TEST-CARBON-001",
           "standard": "VCS",
           "vintage_year": 2024,
-          "project_name": "Veritoken Test Carbon Project",
+          "project_name": "AstraLedger Test Carbon Project",
           "project_type": "forestry",
           "country": "US",
           "verifier": "Testnet fixture",
@@ -148,7 +148,7 @@
       "declared_metadata": {
         "package": "carbon-credit-token",
         "role": "carbon_asset",
-        "fixture_project_id": "VERITOKEN-TEST-CARBON-001"
+        "fixture_project_id": "ASTRALEDGER-TEST-CARBON-001"
       },
       "health_check": {
         "function": "total_supply",
@@ -168,7 +168,7 @@
       "constructor_args": {
         "admin": "${admin}",
         "decimal": 7,
-        "name": "Veritoken Test RWA",
+        "name": "AstraLedger Test RWA",
         "symbol": "VT-RWA",
         "asset_type": "property",
         "kyc_registry": "${contract.kyc_registry}",

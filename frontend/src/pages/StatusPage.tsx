@@ -144,7 +144,7 @@ export default function StatusPage() {
         eyebrow="Operations"
         icon={<Icon.shield size={22} />}
         title="Deployment Status"
-        description="Live health of all deployed Veritoken contracts. Refreshes every 60 seconds."
+        description="Live health of all deployed AstraLedger contracts. Refreshes every 60 seconds."
       />
 
       <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "1rem" }}>

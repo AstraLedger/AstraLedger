@@ -2,7 +2,7 @@
  * Drop-in replacement for `@stellar/freighter-api`, used only when Vite runs
  * in `--mode e2e` (see vite.config.ts's conditional alias). Playwright's
  * `installFreighterWallet()` (tests/e2e/fixtures/freighter-shim.ts) injects
- * `window.__VERITOKEN_E2E_WALLET__` with a keypair before each test
+ * `window.__ASTRALEDGER_E2E_WALLET__` with a keypair before each test
  * navigates; this module signs locally with that keypair instead of talking
  * to a real Freighter extension over its private postMessage protocol.
  *
@@ -19,8 +19,8 @@ interface InjectedWallet {
 }
 
 function injectedWallet(): InjectedWallet | undefined {
-  return (window as unknown as { __VERITOKEN_E2E_WALLET__?: InjectedWallet })
-    .__VERITOKEN_E2E_WALLET__;
+  return (window as unknown as { __ASTRALEDGER_E2E_WALLET__?: InjectedWallet })
+    .__ASTRALEDGER_E2E_WALLET__;
 }
 
 function requireWallet(): InjectedWallet {

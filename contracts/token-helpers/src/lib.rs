@@ -1,7 +1,7 @@
 #![no_std]
 #![cfg_attr(not(test), deny(clippy::unwrap_used))]
 
-//! Shared helpers used by every Veritoken asset contract.
+//! Shared helpers used by every AstraLedger asset contract.
 //!
 //! ## Storage key compatibility
 //! [`SharedDataKey`] uses unit variant names as XDR discriminants (e.g. `"Admin"`).

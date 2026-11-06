@@ -76,7 +76,7 @@ async function invoke(
 }
 
 // ── Encoding helpers (kept local so this file has no dependency on the
-// frontend's @veritoken/sdk encoders, matching tests/integration's style) ──
+// frontend's @astraledger/sdk encoders, matching tests/integration's style) ──
 
 import { Address, xdr } from "./stellar-sdk";
 

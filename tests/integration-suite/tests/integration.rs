@@ -1,4 +1,4 @@
-//! Cross-contract integration tests for the Veritoken contract suite.
+//! Cross-contract integration tests for the AstraLedger contract suite.
 //!
 //! These tests instantiate the complete contract stack in the Soroban test
 //! environment and exercise realistic end-to-end workflows.  They are

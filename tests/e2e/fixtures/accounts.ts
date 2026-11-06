@@ -14,7 +14,7 @@ import { Keypair } from "./stellar-sdk";
 
 export function deterministicKeypair(label: string): Keypair {
   return Keypair.fromRawEd25519Seed(
-    createHash("sha256").update(`veritoken-e2e:${label}`).digest(),
+    createHash("sha256").update(`astraledger-e2e:${label}`).digest(),
   );
 }
 

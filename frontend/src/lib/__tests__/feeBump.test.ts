@@ -2,7 +2,7 @@
  * Unit tests for feeBump.ts and useSubmitWithFeeBump.ts
  *
  * These tests run in the jsdom+Vitest environment configured by vite.config.ts.
- * The Stellar SDK and @veritoken/sdk are mocked so no real XDR or network I/O
+ * The Stellar SDK and @astraledger/sdk are mocked so no real XDR or network I/O
  * occurs.
  */
 
@@ -53,9 +53,9 @@ vi.mock("@stellar/stellar-sdk", () => {
   };
 });
 
-// Mock the @veritoken/sdk re-exports used by txPipeline.ts so that feeBump.ts
+// Mock the @astraledger/sdk re-exports used by txPipeline.ts so that feeBump.ts
 // can import TransientError and TimeoutError.
-vi.mock("@veritoken/sdk", () => {
+vi.mock("@astraledger/sdk", () => {
   class TxError extends Error {
     constructor(
       message: string,

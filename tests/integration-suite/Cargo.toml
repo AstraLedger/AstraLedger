@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 publish = false
 
-# Cross-contract integration test suite for Veritoken.
+# Cross-contract integration test suite for AstraLedger.
 #
 # These tests instantiate the full contract stack (KYC registry,
 # compliance engine, and one or more asset contracts) together and exercise

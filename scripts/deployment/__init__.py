@@ -1,4 +1,4 @@
-"""Deployment and verification automation for Veritoken contracts."""
+"""Deployment and verification automation for AstraLedger contracts."""
 
 from .models import DeploymentError
 from .orchestrator import DeploymentOrchestrator, verify_manifest

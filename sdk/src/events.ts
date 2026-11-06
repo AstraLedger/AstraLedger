@@ -1,7 +1,7 @@
 /**
- * Veritoken Structured Event Types
+ * AstraLedger Structured Event Types
  *
- * All Veritoken contracts emit events via Soroban's event system.
+ * All AstraLedger contracts emit events via Soroban's event system.
  * Each event has a topic tuple (first element is always the event name Symbol)
  * and a data payload.
  *

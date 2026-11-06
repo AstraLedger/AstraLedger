@@ -2,7 +2,7 @@
  * Compatibility adapters from the frontend contract API to the canonical SDK
  * client core. The frontend keeps its existing method signatures, while XDR
  * construction, simulation decoding, sequence management, signed writes, and
- * contract errors all execute through `@veritoken/sdk`.
+ * contract errors all execute through `@astraledger/sdk`.
  */
 
 import type { rpc, xdr } from "@stellar/stellar-sdk";
@@ -11,11 +11,11 @@ import {
   buildContractTx,
   SIM_SOURCE,
   parseContractError,
-} from "@veritoken/sdk";
+} from "@astraledger/sdk";
 import type {
   ContractName,
   SignTx as SdkSignTx,
-} from "@veritoken/sdk";
+} from "@astraledger/sdk";
 import { NETWORK_PASSPHRASE, getServer } from "../stellar";
 
 export type SignTx = SdkSignTx;
@@ -129,4 +129,4 @@ export {
   encodeI128 as toI128,
   encodeString as toString,
   encodeBool as toBool,
-} from "@veritoken/sdk";
+} from "@astraledger/sdk";

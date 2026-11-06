@@ -25,7 +25,7 @@ import {
   encodeRiskConfig,
   encodeTierPolicy,
   decodeTransferDecision,
-} from "@veritoken/sdk";
+} from "@astraledger/sdk";
 
 // ── Internal map builder ──────────────────────────────────────────────────────
 

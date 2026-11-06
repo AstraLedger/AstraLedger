@@ -93,8 +93,8 @@ export default function Layout({ children }: { children: ReactNode }) {
       <header style={styles.header}>
         <div className="container" style={styles.headerInner}>
           <Link to="/" style={styles.brand} onClick={closeMenu}>
-            <img src="/veritoken.svg" alt="" width={34} height={34} style={{ borderRadius: 9 }} />
-            <span style={styles.brandName}>Veritoken</span>
+            <img src="/astraledger.svg" alt="" width={34} height={34} style={{ borderRadius: 9 }} />
+            <span style={styles.brandName}>AstraLedger</span>
             <span className="badge badge-accent" style={{ marginLeft: "0.4rem" }}>
               {network === "mainnet" ? "Mainnet" : "Testnet"}
             </span>
@@ -217,7 +217,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "0.75rem" }}
         >
           <span className="muted" style={{ fontSize: "0.8rem" }}>
-            © {new Date().getFullYear()} Veritoken · RWA Tokenization Kit for Stellar
+            © {new Date().getFullYear()} AstraLedger · RWA Tokenization Kit for Stellar
           </span>
           <span className="muted" style={{ fontSize: "0.8rem" }}>
             Compliance enforced at the protocol level

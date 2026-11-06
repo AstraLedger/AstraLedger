@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="./assets/logo.svg" alt="Veritoken" width="320"/>
+  <img src="./assets/logo.svg" alt="AstraLedger" width="320"/>
 </p>
 
 <p align="center"><strong>RWA Tokenization Starter Kit for Stellar</strong></p>
 
-Veritoken is a toolkit for bringing real-world assets on-chain. It gives any team a compliant, auditable foundation for tokenizing invoices, property shares, and carbon credits — with KYC verification and transfer compliance baked in at the protocol level, not bolted on after the fact.
+AstraLedger is a toolkit for bringing real-world assets on-chain. It gives any team a compliant, auditable foundation for tokenizing invoices, property shares, and carbon credits — with KYC verification and transfer compliance baked in at the protocol level, not bolted on after the fact.
 
-The name fuses *veritas* (Latin: truth) with *token* — signalling verifiable, on-chain ownership of real things.
+AstraLedger brings together transparent asset records and dependable ledger infrastructure for compliant ownership on Stellar.
 
 ---
 
@@ -16,7 +16,7 @@ Tokenizing real-world assets on Stellar today means rebuilding the same complian
 
 ## The Solution
 
-Veritoken is a reusable, composable kit of Soroban contracts that any team can fork and deploy in days. The compliance layer is not an afterthought — it is the foundation everything else is built on. Every token transfer runs through an on-chain KYC registry and a configurable compliance engine before it executes.
+AstraLedger is a reusable, composable kit of Soroban contracts that any team can fork and deploy in days. The compliance layer is not an afterthought — it is the foundation everything else is built on. Every token transfer runs through an on-chain KYC registry and a configurable compliance engine before it executes.
 
 ---
 
@@ -73,8 +73,8 @@ resume, mainnet configuration, and verification details.
 
 ```bash
 # Clone
-git clone https://github.com/abore9769/Veritoken
-cd Veritoken
+git clone https://github.com/Muyideen-js/Veritoken.git AstraLedger
+cd AstraLedger
 
 # One-command bootstrap: checks tools, installs deps, creates and funds identity
 bash scripts/setup-local.sh
@@ -90,23 +90,23 @@ npm run dev
 For the full CLI reference (deploy, KYC, compliance, tests):
 
 ```bash
-bash scripts/veritoken-cli.sh help
+bash scripts/astraledger-cli.sh help
 ```
 
 Common CLI operations:
 
 ```bash
 # KYC
-bash scripts/veritoken-cli.sh kyc approve <addr> 1 0 US
-bash scripts/veritoken-cli.sh kyc check <addr>
+bash scripts/astraledger-cli.sh kyc approve <addr> 1 0 US
+bash scripts/astraledger-cli.sh kyc check <addr>
 
 # Compliance
-bash scripts/veritoken-cli.sh compliance pause
-bash scripts/veritoken-cli.sh compliance blocklist add <addr>
+bash scripts/astraledger-cli.sh compliance pause
+bash scripts/astraledger-cli.sh compliance blocklist add <addr>
 
 # Tests
-bash scripts/veritoken-cli.sh test
-bash scripts/veritoken-cli.sh sdk-test
+bash scripts/astraledger-cli.sh test
+bash scripts/astraledger-cli.sh sdk-test
 ```
 
 ### Docker (recommended for consistent local environments)
@@ -150,7 +150,7 @@ Copy `frontend/.env.example` to `frontend/.env` and fill in your deployed contra
 
 ---
 
-## Extending Veritoken
+## Extending AstraLedger
 
 The kit is designed to be forked and customised:
 
@@ -195,7 +195,7 @@ For a full reference of every public method, data structure, and error code acro
 ## Repository Layout
 
 ```
-Veritoken/
+AstraLedger/
 ├── contracts/
 │   ├── rwa-token/              # Base SEP-41 RWA token
 │   ├── kyc-registry/           # On-chain KYC registry
@@ -208,7 +208,7 @@ Veritoken/
 │       ├── lib/                # Stellar SDK + wallet bindings
 │       ├── pages/              # One page per asset type
 │       └── types/              # Shared TypeScript types
-├── sdk/                        # @veritoken/sdk — TypeScript client library
+├── sdk/                        # @astraledger/sdk — TypeScript client library
 │   ├── src/clients/            # One typed client per contract
 │   ├── scripts/                # Contract client generator
 │   └── README.md                # Getting started + usage reference
@@ -246,7 +246,7 @@ Veritoken/
 | [docs/incident-response.md](docs/incident-response.md) | Operational runbook: pause, key rotation, compromised verifier, upgrade |
 | [docs/troubleshooting.md](docs/troubleshooting.md) | Common problems and fixes for contributors and operators |
 | [docs/examples/](docs/examples/) | Language-specific integration examples (Python, JavaScript) |
-| [docs/community-showcase.md](docs/community-showcase.md) | Community integrations, extensions, and reference implementations built on Veritoken |
+| [docs/community-showcase.md](docs/community-showcase.md) | Community integrations, extensions, and reference implementations built on AstraLedger |
 | [docs/gas-report.md](docs/gas-report.md) | Baseline gas and performance measurements |
 | [docs/security-checklist.md](docs/security-checklist.md) | Security review checklist and hardening playbook |
 | [sdk/README.md](sdk/README.md) | TypeScript SDK guide: getting started, multi-network configuration, per-contract reference, error/event handling, adding a new contract client |
@@ -294,6 +294,6 @@ MIT — see [LICENSE](LICENSE) for details.
 
 ## About
 
-Built for the Stellar ecosystem as public infrastructure. The goal is for any team building an RWA product on Stellar to be able to start from Veritoken rather than starting from zero.
+Built for the Stellar ecosystem as public infrastructure. The goal is for any team building an RWA product on Stellar to be able to start from AstraLedger rather than starting from zero.
 
 > *"Making it infrastructure the whole Stellar ecosystem can build on."*

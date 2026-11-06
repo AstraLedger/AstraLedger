@@ -1,7 +1,7 @@
 /**
  * eventParser — topic-based discriminator for Soroban contract events.
  *
- * The Veritoken contracts emit events whose first topic is a Symbol that
+ * The AstraLedger contracts emit events whose first topic is a Symbol that
  * identifies the event kind (e.g. "transfer", "mint", "kyc_change").
  * This module decodes the raw XDR topic/value arrays returned by the
  * Soroban RPC into strongly-typed ParsedEvent variants.

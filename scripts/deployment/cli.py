@@ -26,7 +26,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="deployment_cli",
         description=(
-            "Deploy, register, and verify Veritoken Soroban contracts with "
+            "Deploy, register, and verify AstraLedger Soroban contracts with "
             "resumable checkpoints and auditable JSON output."
         ),
     )

@@ -4,7 +4,7 @@
 
 set -euo pipefail
 
-NAME="${1:-veritoken-dev}"
+NAME="${1:-astraledger-dev}"
 NETWORK="testnet"
 
 echo "==> Generating identity: $NAME"

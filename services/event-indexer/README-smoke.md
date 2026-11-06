@@ -32,7 +32,7 @@ Expected: `stellar`, `postgres`, `indexer` all showing `healthy` or `running`.
 
 ```bash
 # Inside the contracts toolchain container (or locally if Stellar CLI is installed)
-bash scripts/deploy.sh veritoken-dev
+bash scripts/deploy.sh astraledger-dev
 ```
 
 This writes contract IDs to `frontend/.env`. Copy the relevant IDs:
@@ -54,7 +54,7 @@ Edit `services/event-indexer/.env`:
 ```dotenv
 RPC_URL=http://localhost:8000/soroban/rpc
 CONTRACT_IDS=rwa:<VITE_RWA_TOKEN_ID>,kyc:<VITE_KYC_REGISTRY_ID>,compliance:<VITE_COMPLIANCE_ENGINE_ID>
-DATABASE_URL=postgres://veritoken:veritoken@localhost:5432/veritoken_indexer
+DATABASE_URL=postgres://astraledger:astraledger@localhost:5432/astraledger_indexer
 ```
 
 Restart the indexer container (or run locally):

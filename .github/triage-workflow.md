@@ -1,6 +1,6 @@
 # Issue Triage Workflow
 
-This document defines the lightweight issue triage matrix and process for Veritoken.
+This document defines the lightweight issue triage matrix and process for AstraLedger.
 
 ## Triage Matrix
 

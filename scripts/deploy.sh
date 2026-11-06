@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Veritoken deployment compatibility entry point.
+# AstraLedger deployment compatibility entry point.
 #
 # Usage:
 #   bash scripts/deploy.sh [identity-name]

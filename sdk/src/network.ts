@@ -23,7 +23,7 @@
  *
  * @example Switch networks with no code changes
  * ```ts
- * // Reads VERITOKEN_NETWORK / STELLAR_NETWORK / VITE_STELLAR_NETWORK.
+ * // Reads ASTRALEDGER_NETWORK / STELLAR_NETWORK / VITE_STELLAR_NETWORK.
  * const config = resolveNetworkConfig();
  * const server = createServer(config);
  * ```
@@ -132,10 +132,10 @@ export interface NetworkConfig {
  * variables, and built-in defaults, validating the result.
  *
  * Env vars consulted (first match wins), for each field:
- * - network: `VERITOKEN_NETWORK`, `STELLAR_NETWORK`, `VITE_STELLAR_NETWORK`
- * - rpcUrl: `VERITOKEN_RPC_URL`, `SOROBAN_RPC_URL`, `VITE_SOROBAN_RPC_URL`
- * - networkPassphrase: `VERITOKEN_NETWORK_PASSPHRASE`, `STELLAR_NETWORK_PASSPHRASE`, `VITE_STELLAR_NETWORK_PASSPHRASE`
- * - allowHttp: `VERITOKEN_RPC_ALLOW_HTTP` (`"true"` / `"false"`)
+ * - network: `ASTRALEDGER_NETWORK`, `STELLAR_NETWORK`, `VITE_STELLAR_NETWORK`
+ * - rpcUrl: `ASTRALEDGER_RPC_URL`, `SOROBAN_RPC_URL`, `VITE_SOROBAN_RPC_URL`
+ * - networkPassphrase: `ASTRALEDGER_NETWORK_PASSPHRASE`, `STELLAR_NETWORK_PASSPHRASE`, `VITE_STELLAR_NETWORK_PASSPHRASE`
+ * - allowHttp: `ASTRALEDGER_RPC_ALLOW_HTTP` (`"true"` / `"false"`)
  *
  * @throws InvalidNetworkConfigError if the network name is unrecognized and
  * no explicit `rpcUrl` + `networkPassphrase` pair was supplied to configure
@@ -146,14 +146,14 @@ export interface NetworkConfig {
 export function resolveNetworkConfig(overrides: NetworkOverrides = {}): NetworkConfig {
   const networkName =
     overrides.network ??
-    readEnv("VERITOKEN_NETWORK", "STELLAR_NETWORK", "VITE_STELLAR_NETWORK") ??
+    readEnv("ASTRALEDGER_NETWORK", "STELLAR_NETWORK", "VITE_STELLAR_NETWORK") ??
     "testnet";
 
   const explicitRpcUrl =
-    overrides.rpcUrl ?? readEnv("VERITOKEN_RPC_URL", "SOROBAN_RPC_URL", "VITE_SOROBAN_RPC_URL");
+    overrides.rpcUrl ?? readEnv("ASTRALEDGER_RPC_URL", "SOROBAN_RPC_URL", "VITE_SOROBAN_RPC_URL");
   const explicitPassphrase =
     overrides.networkPassphrase ??
-    readEnv("VERITOKEN_NETWORK_PASSPHRASE", "STELLAR_NETWORK_PASSPHRASE", "VITE_STELLAR_NETWORK_PASSPHRASE");
+    readEnv("ASTRALEDGER_NETWORK_PASSPHRASE", "STELLAR_NETWORK_PASSPHRASE", "VITE_STELLAR_NETWORK_PASSPHRASE");
 
   const known = isValidNetwork(networkName);
   if (!known && !(explicitRpcUrl && explicitPassphrase)) {
@@ -177,14 +177,14 @@ export function resolveNetworkConfig(overrides: NetworkOverrides = {}): NetworkC
   if (overrides.allowHttp !== undefined) {
     allowHttp = overrides.allowHttp;
   } else {
-    const envAllowHttp = readEnv("VERITOKEN_RPC_ALLOW_HTTP");
+    const envAllowHttp = readEnv("ASTRALEDGER_RPC_ALLOW_HTTP");
     allowHttp = envAllowHttp !== undefined ? envAllowHttp === "true" : known && ALLOW_HTTP_NETWORKS.has(networkName as KnownNetwork);
   }
 
   if (!allowHttp && rpcUrl.startsWith("http://")) {
     throw new InvalidNetworkConfigError(
       `RPC URL "${rpcUrl}" uses plain HTTP, which is rejected for network "${networkName}". ` +
-        `Pass { allowHttp: true } (or set VERITOKEN_RPC_ALLOW_HTTP=true) if this is intentional, ` +
+        `Pass { allowHttp: true } (or set ASTRALEDGER_RPC_ALLOW_HTTP=true) if this is intentional, ` +
         `e.g. a local standalone node.`,
     );
   }

@@ -1,4 +1,4 @@
--- Migration 001: initial schema for the Veritoken event indexer
+-- Migration 001: initial schema for the AstraLedger event indexer
 -- Creates the four core tables used by ContractPoller and the REST API.
 
 BEGIN;

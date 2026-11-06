@@ -5,7 +5,7 @@
 #   bash scripts/setup-local.sh [--identity NAME] [--network testnet|standalone] [--deploy] [--docker]
 #
 # Options:
-#   --identity NAME   Stellar CLI identity to create/use (default: veritoken-dev)
+#   --identity NAME   Stellar CLI identity to create/use (default: astraledger-dev)
 #   --network NAME    Target network: testnet (default) or standalone
 #   --deploy          Also build and deploy contracts after setup
 #   --docker          Use Docker Compose stack instead of local toolchain
@@ -24,7 +24,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 # ── Defaults ──────────────────────────────────────────────────────────────────
-IDENTITY="${VERITOKEN_IDENTITY:-veritoken-dev}"
+IDENTITY="${ASTRALEDGER_IDENTITY:-astraledger-dev}"
 NETWORK="${STELLAR_NETWORK:-testnet}"
 DO_DEPLOY=0
 USE_DOCKER=0
@@ -132,7 +132,7 @@ fi
 # ── Summary ───────────────────────────────────────────────────────────────────
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo " Veritoken local environment ready"
+echo " AstraLedger local environment ready"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
 echo " Identity : $IDENTITY  (network: $NETWORK)"

@@ -1,6 +1,6 @@
 #!/usr/bin/env tsx
 /**
- * deploy.ts — Veritoken contract deployment script
+ * deploy.ts — AstraLedger contract deployment script
  *
  * Reads a deployment config JSON, uploads WASMs to the Stellar network,
  * deploys contracts that have changed (by comparing WASM hashes against an
@@ -335,7 +335,7 @@ async function initializeContract(
 // ── Main ──────────────────────────────────────────────────────────────────────
 
 async function main(): Promise<void> {
-  console.log("=== Veritoken Deployment Script ===");
+  console.log("=== AstraLedger Deployment Script ===");
   console.log(`RPC URL:        ${RPC_URL}`);
   console.log(`Config:         ${CONFIG_FILE}`);
   console.log(`WASM dir:       ${WASM_DIR}`);

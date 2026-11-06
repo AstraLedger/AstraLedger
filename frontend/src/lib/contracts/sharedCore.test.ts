@@ -18,7 +18,7 @@ import {
   type ProjectMeta as SdkProjectMeta,
   type PropertyMeta as SdkPropertyMeta,
   type RetirementReceipt as SdkRetirementReceipt,
-} from "@veritoken/sdk";
+} from "@astraledger/sdk";
 import {
   ConfirmError as FrontendConfirmError,
   SequenceCache as FrontendSequenceCache,

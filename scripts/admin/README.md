@@ -1,6 +1,6 @@
-# Veritoken Admin CLI Scripts
+# AstraLedger Admin CLI Scripts
 
-Bash scripts for common admin operations on deployed Veritoken contracts.
+Bash scripts for common admin operations on deployed AstraLedger contracts.
 
 All scripts read contract IDs and network settings from `frontend/.env`. Set
 `ADMIN_IDENTITY` in your shell (or rely on the default `alice`) to select which

@@ -1,5 +1,5 @@
 /**
- * Shared ScVal encoding utilities for all Veritoken contract structs.
+ * Shared ScVal encoding utilities for all AstraLedger contract structs.
  *
  * Every contract client that needs to pass a complex struct on-chain should
  * import an encoder from here rather than inlining nativeToScVal type hints.

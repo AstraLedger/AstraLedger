@@ -6,13 +6,13 @@ export default function DocsPage() {
       <PageHeader
         eyebrow="Reference"
         title="Documentation"
-        description="Everything you need to get started with Veritoken — from wallet setup to on-chain compliance."
+        description="Everything you need to get started with AstraLedger — from wallet setup to on-chain compliance."
       />
 
       <section style={styles.section}>
         <h2 style={styles.h2}>Getting Started</h2>
         <p style={styles.p}>
-          Veritoken runs on the Stellar network. To interact with the app you need the{" "}
+          AstraLedger runs on the Stellar network. To interact with the app you need the{" "}
           <strong>Freighter</strong> browser wallet extension. Install it from{" "}
           <a href="https://freighter.app" target="_blank" rel="noopener noreferrer" style={styles.link}>
             freighter.app
@@ -25,7 +25,7 @@ export default function DocsPage() {
       <section style={styles.section}>
         <h2 style={styles.h2}>KYC Process</h2>
         <p style={styles.p}>
-          All token interactions require an active KYC approval recorded on-chain. Veritoken
+          All token interactions require an active KYC approval recorded on-chain. AstraLedger
           supports three KYC tiers:
         </p>
         <ul style={styles.ul}>
@@ -88,12 +88,12 @@ export default function DocsPage() {
         <p style={styles.p}>
           For contract interfaces, deployment instructions, and integration guides see the{" "}
           <a
-            href="https://github.com/VERITOKEN-xx/Veritoken"
+            href="https://github.com/Muyideen-js/Veritoken"
             target="_blank"
             rel="noopener noreferrer"
             style={styles.link}
           >
-            Veritoken GitHub README
+            AstraLedger GitHub README
           </a>
           .
         </p>

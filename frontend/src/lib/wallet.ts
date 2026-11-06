@@ -26,7 +26,7 @@ import {
 
 // ── Persistence key ──────────────────────────────────────────────────────────
 
-const PROVIDER_TYPE_KEY = "veritoken-wallet-provider";
+const PROVIDER_TYPE_KEY = "astraledger-wallet-provider";
 
 function loadPersistedProviderType(): ProviderType | null {
   try {

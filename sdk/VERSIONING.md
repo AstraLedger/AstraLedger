@@ -1,6 +1,6 @@
 # SDK Versioning Policy
 
-`@veritoken/sdk` follows [Semantic Versioning 2.0.0](https://semver.org).
+`@astraledger/sdk` follows [Semantic Versioning 2.0.0](https://semver.org).
 
 ## Version format
 

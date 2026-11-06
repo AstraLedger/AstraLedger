@@ -104,7 +104,7 @@ Note: the global cap remains binding when it is lower than the tier-pair cap.
 ### TypeScript SDK
 
 ```ts
-import { ComplianceEngineClient, createServer, NETWORK_PASSPHRASES } from "@veritoken/sdk";
+import { ComplianceEngineClient, createServer, NETWORK_PASSPHRASES } from "@astraledger/sdk";
 
 const server = createServer("testnet");
 const ce = new ComplianceEngineClient(ceId, server, NETWORK_PASSPHRASES.testnet);

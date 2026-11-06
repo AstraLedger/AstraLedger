@@ -97,7 +97,7 @@ describe("integration fixture plans", () => {
     expect(contextOrder).toEqual(["kyc", "compliance", "rwa"]);
     expect(transport.deployments[2].constructorArgs).toHaveLength(9);
     expect(transport.deployments[2].constructorArgs?.[2].str().toString()).toBe(
-      "Veritoken RWA",
+      "AstraLedger RWA",
     );
   });
 

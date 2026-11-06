@@ -1,5 +1,5 @@
 /**
- * Integration tests for Veritoken contracts against a local Stellar quickstart
+ * Integration tests for AstraLedger contracts against a local Stellar quickstart
  * node. Every test receives a newly deployed fixture, while uploaded WASM code
  * is cached for the lifetime of this process.
  *
@@ -206,7 +206,7 @@ describe("RWA Token lifecycle", () => {
     if (!fixture) throw new Error("RWA fixture was not initialized");
     expect(fixture.contract("rwa")).toBeTruthy();
     const name = await fixture.invoke("rwa", "name", []);
-    expect(name.str().toString()).toBe("Veritoken RWA");
+    expect(name.str().toString()).toBe("AstraLedger RWA");
   });
 });
 
@@ -236,7 +236,7 @@ describe("RWA Token recovery lifecycle (2-of-3)", () => {
     const guardianKeypair = (label: string) =>
       Keypair.fromRawEd25519Seed(
         createHash("sha256")
-          .update(`veritoken-recovery-test:${label}`)
+          .update(`astraledger-recovery-test:${label}`)
           .digest(),
       );
     const g1 = guardianKeypair("g1");
@@ -372,7 +372,7 @@ describe("Compliance Engine blocklist lifecycle (20-address scale)", () => {
     const blocklistKeypair = (n: number) =>
       Keypair.fromRawEd25519Seed(
         createHash("sha256")
-          .update(`veritoken-blocklist-test:${n}`)
+          .update(`astraledger-blocklist-test:${n}`)
           .digest(),
       );
 

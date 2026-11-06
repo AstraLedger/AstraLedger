@@ -1,6 +1,6 @@
 # Docker Local Environment
 
-The Veritoken Docker environment gives every developer and CI runner an identical local stack: a Stellar standalone node, the Rust/WASM contract toolchain, and the Vite frontend dev server — all wired together with a single `docker compose up`.
+The AstraLedger Docker environment gives every developer and CI runner an identical local stack: a Stellar standalone node, the Rust/WASM contract toolchain, and the Vite frontend dev server — all wired together with a single `docker compose up`.
 
 ---
 
@@ -55,10 +55,10 @@ Then run the normal scripts:
 
 ```bash
 # Create and fund a local identity
-bash scripts/setup-identity.sh veritoken-dev
+bash scripts/setup-identity.sh astraledger-dev
 
 # Build and deploy all contracts; writes contract IDs to frontend/.env
-bash scripts/deploy.sh veritoken-dev
+bash scripts/deploy.sh astraledger-dev
 ```
 
 After deploy, the contract IDs are written to `frontend/.env` on your host
@@ -137,7 +137,7 @@ services:
     options: --health-cmd "curl -sf http://localhost:8000/soroban/rpc"
 
 container:
-  image: veritoken-dev  # built from Dockerfile
+  image: astraledger-dev  # built from Dockerfile
 ```
 
 ---

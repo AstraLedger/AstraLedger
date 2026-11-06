@@ -1,6 +1,6 @@
 # Language-Specific Integration Examples
 
-These examples show how to interact with Veritoken contracts from languages
+These examples show how to interact with AstraLedger contracts from languages
 outside the primary Rust/TypeScript stack. Each example covers the same three
 workflows so you can compare them side-by-side:
 
@@ -31,7 +31,7 @@ writes; the examples below follow the same pattern in each language.
 |---|---|---|
 | [`python_example.py`](python_example.py) | Python 3.10+ | `python python_example.py` |
 | [`javascript_example.js`](javascript_example.js) | JavaScript (Node.js) | `node javascript_example.js` |
-| [`sdk_client_factory_example.ts`](sdk_client_factory_example.ts) | TypeScript (`@veritoken/sdk`) | `npx tsx docs/examples/sdk_client_factory_example.ts` |
+| [`sdk_client_factory_example.ts`](sdk_client_factory_example.ts) | TypeScript (`@astraledger/sdk`) | `npx tsx docs/examples/sdk_client_factory_example.ts` |
 
 The TypeScript example additionally shows the SDK's client factory and
 dependency-injection pattern (`createClients` / `ClientFactory`) — composing

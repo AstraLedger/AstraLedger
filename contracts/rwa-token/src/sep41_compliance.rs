@@ -42,7 +42,7 @@ fn setup_sep41() -> Sep41Harness {
         (
             admin.clone(),
             7u32,
-            String::from_str(&env, "Veritoken RWA"),
+            String::from_str(&env, "AstraLedger RWA"),
             String::from_str(&env, "VTRWA"),
             String::from_str(&env, "property"),
             kyc_id.clone(),
@@ -92,7 +92,7 @@ impl Sep41Harness {
 #[test]
 fn sep41_name() {
     let h = setup_sep41();
-    assert_eq!(h.token.name(), String::from_str(&h.env, "Veritoken RWA"));
+    assert_eq!(h.token.name(), String::from_str(&h.env, "AstraLedger RWA"));
 }
 
 // ── symbol ────────────────────────────────────────────────────────────

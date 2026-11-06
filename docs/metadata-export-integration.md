@@ -1,6 +1,6 @@
 # Metadata Export Integration
 
-This guide explains how external tools — block explorers, dashboards, metadata indexers, and third-party services — can discover and consume Veritoken token metadata.
+This guide explains how external tools — block explorers, dashboards, metadata indexers, and third-party services — can discover and consume AstraLedger token metadata.
 
 ---
 
@@ -12,7 +12,7 @@ The snapshot includes:
 
 | Field | Description |
 |---|---|
-| `name` | Token name (e.g. `"Veritoken RWA"`) |
+| `name` | Token name (e.g. `"AstraLedger RWA"`) |
 | `symbol` | Token symbol (e.g. `"VTRWA"`) |
 | `decimals` | Decimal precision (e.g. `7`) |
 | `asset_type` | One of `"invoice"`, `"property"`, `"carbon_credit"` |
@@ -54,7 +54,7 @@ Example output:
 
 ```json
 {
-  "name": "Veritoken RWA",
+  "name": "AstraLedger RWA",
   "symbol": "VTRWA",
   "decimals": 7,
   "asset_type": "property",
@@ -78,7 +78,7 @@ Example output:
 ### TypeScript SDK
 
 ```ts
-import { RwaTokenClient, createServer, NETWORK_PASSPHRASES } from "@veritoken/sdk";
+import { RwaTokenClient, createServer, NETWORK_PASSPHRASES } from "@astraledger/sdk";
 
 const server = createServer("testnet");
 const client = new RwaTokenClient(
@@ -136,7 +136,7 @@ The document at `external_uri` should be a JSON object.  Recommended shape:
 {
   "@context": "https://schema.org/",
   "@type": "FinancialProduct",
-  "name": "Veritoken RWA",
+  "name": "AstraLedger RWA",
   "description": "Fractional ownership token for 123 Main St",
   "identifier": "US1234567890",
   "issuer": {

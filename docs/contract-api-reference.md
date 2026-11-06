@@ -1,6 +1,6 @@
 # Contract API Reference
 
-This document is the canonical reference for every public entry point, data structure, and error code in the Veritoken contract suite. Use it alongside the source code in `contracts/` when deploying, integrating, or extending the kit.
+This document is the canonical reference for every public entry point, data structure, and error code in the AstraLedger contract suite. Use it alongside the source code in `contracts/` when deploying, integrating, or extending the kit.
 
 > **Navigation**
 > - [KYC Registry](#kyc-registry)
@@ -589,7 +589,7 @@ balance(env, id: Address) → i128
 
 #### SEP-41 methods
 ```
-name(env) → String       // "Veritoken Invoice"
+name(env) → String       // "AstraLedger Invoice"
 symbol(env) → String     // "VTINV"
 decimals(env) → u32      // 7
 transfer(env, from, to, amount, invoice_id)
@@ -804,7 +804,7 @@ get_registry_link(env) → (String, String) // (registry_url, registry_project_i
 
 #### SEP-41 standard interface
 ```
-name(env) → String        // "Veritoken Carbon Credit"
+name(env) → String        // "AstraLedger Carbon Credit"
 symbol(env) → String      // "VTCC"
 decimals(env) → u32       // 0 (whole tonnes only)
 total_supply(env) → i128

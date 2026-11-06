@@ -1,7 +1,7 @@
 /**
- * Veritoken — JavaScript (Node.js) integration examples
+ * AstraLedger — JavaScript (Node.js) integration examples
  * ======================================================
- * Demonstrates three common workflows against deployed Veritoken contracts
+ * Demonstrates three common workflows against deployed AstraLedger contracts
  * using plain Node.js — no TypeScript compiler or bundler required.
  *
  * Workflows covered:

@@ -3,7 +3,7 @@ name = "token-helpers"
 version = "0.1.0"
 edition = "2021"
 publish = false
-description = "Shared admin, KYC, compliance, and validation helpers for Veritoken asset contracts"
+description = "Shared admin, KYC, compliance, and validation helpers for AstraLedger asset contracts"
 
 [lib]
 crate-type = ["rlib"]

@@ -1,6 +1,6 @@
-# Contributing to Veritoken
+# Contributing to AstraLedger
 
-Thanks for your interest in contributing. Veritoken is a Soroban smart contract toolkit for RWA tokenization on Stellar — contributions of all kinds are welcome.
+Thanks for your interest in contributing. AstraLedger is a Soroban smart contract toolkit for RWA tokenization on Stellar — contributions of all kinds are welcome.
 
 ---
 
@@ -16,8 +16,8 @@ Thanks for your interest in contributing. Veritoken is a Soroban smart contract 
 ## Setup
 
 ```bash
-git clone https://github.com/abore9769/Veritoken
-cd Veritoken
+git clone https://github.com/Muyideen-js/Veritoken.git AstraLedger
+cd AstraLedger
 ```
 
 ### Contracts
@@ -86,13 +86,13 @@ policy, current limits, and reduction techniques.
 
 ## Good First Issues
 
-Look for issues labelled [`good first issue`](https://github.com/abore9769/Veritoken/issues?q=label%3A%22good+first+issue%22) — these are scoped to be approachable without deep familiarity with the full codebase.
+Look for issues labelled [`good first issue`](https://github.com/Muyideen-js/Veritoken/issues?q=label%3A%22good+first+issue%22) — these are scoped to be approachable without deep familiarity with the full codebase.
 
 ---
 
 ## Versioning
 
-Veritoken uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html). Version numbers apply to the contract suite as a whole.
+AstraLedger uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html). Version numbers apply to the contract suite as a whole.
 
 | Change type | Version bump |
 |---|---|
@@ -112,7 +112,7 @@ Breaking changes (major bumps) must be discussed in an issue before implementati
 
 ## Questions
 
-Open an [issue](https://github.com/abore9769/Veritoken/issues) or start a discussion on GitHub. For significant changes, open an issue first to align on approach before writing code. Please use the appropriate [issue template](.github/ISSUE_TEMPLATE/) when creating new issues.
+Open an [issue](https://github.com/Muyideen-js/Veritoken/issues) or start a discussion on GitHub. For significant changes, open an issue first to align on approach before writing code. Please use the appropriate [issue template](.github/ISSUE_TEMPLATE/) when creating new issues.
 
 ---
 

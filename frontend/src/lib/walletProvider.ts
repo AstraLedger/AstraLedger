@@ -251,11 +251,11 @@ export class LedgerProvider implements WalletProvider {
 // Sessions are persisted to localStorage under WALLETCONNECT_SESSION_KEY so
 // reconnect on page refresh skips the QR step.
 
-const WALLETCONNECT_SESSION_KEY = "veritoken-wc-session";
+const WALLETCONNECT_SESSION_KEY = "astraledger-wc-session";
 const WALLETCONNECT_PROJECT_ID: string =
   (typeof import.meta !== "undefined" &&
     (import.meta as { env?: Record<string, string> }).env?.VITE_WALLETCONNECT_PROJECT_ID) ||
-  "veritoken-dev";
+  "astraledger-dev";
 
 type SignClientType = Awaited<ReturnType<typeof createSignClient>>;
 
@@ -264,10 +264,10 @@ async function createSignClient(projectId: string) {
   return SignClient.init({
     projectId,
     metadata: {
-      name: "Veritoken",
+      name: "AstraLedger",
       description: "RWA Tokenization on Stellar",
-      url: typeof window !== "undefined" ? window.location.origin : "https://veritoken.app",
-      icons: ["https://avatars.githubusercontent.com/u/VERITOKEN-xx"],
+      url: typeof window !== "undefined" ? window.location.origin : "https://astraledger.app",
+      icons: ["https://avatars.githubusercontent.com/u/ASTRALEDGER-xx"],
     },
   });
 }

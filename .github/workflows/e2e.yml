@@ -125,8 +125,8 @@ jobs:
 
       - name: Print standalone node logs on failure
         if: failure()
-        run: docker logs veritoken-e2e-standalone || true
+        run: docker logs astraledger-e2e-standalone || true
 
       - name: Stop standalone node
         if: always()
-        run: docker rm --force --volumes veritoken-e2e-standalone || true
+        run: docker rm --force --volumes astraledger-e2e-standalone || true

@@ -1,7 +1,7 @@
 """
-Veritoken — Python integration examples
+AstraLedger — Python integration examples
 ========================================
-Demonstrates three common workflows against deployed Veritoken contracts:
+Demonstrates three common workflows against deployed AstraLedger contracts:
 
   1. Read compliance rules and token metadata (simulation — no signing needed)
   2. Check KYC state for an address
@@ -73,7 +73,7 @@ def simulate_call(contract_id: str, function_name: str, args: list) -> SCVal:
 
     tx = (
         TransactionBuilder(sim_account, NETWORK_PASSPHRASE, base_fee=100)
-        .add_text_memo("veritoken-sim")
+        .add_text_memo("astraledger-sim")
         .append_invoke_contract_function_op(
             contract_id=contract_id,
             function_name=function_name,

@@ -8,7 +8,7 @@ export interface NetworkStore {
   setNetwork: (network: Network) => void;
 }
 
-const STORAGE_KEY = "veritoken-network";
+const STORAGE_KEY = "astraledger-network";
 
 export const useNetworkStore = create<NetworkStore>()(
   persist(
@@ -24,7 +24,7 @@ export const useNetworkStore = create<NetworkStore>()(
 );
 
 // RPC URL / passphrase resolution (including custom RPC overrides, #451) now
-// lives in `@veritoken/sdk`'s `resolveNetworkConfig` — see `stellar.ts`'s
+// lives in `@astraledger/sdk`'s `resolveNetworkConfig` — see `stellar.ts`'s
 // `getRpcUrl`/`getNetworkPassphrase`, which bridge this store's `network`
 // plus `VITE_SOROBAN_RPC_URL` / `VITE_STELLAR_NETWORK_PASSPHRASE` /
 // `VITE_RPC_ALLOW_HTTP` into it.
