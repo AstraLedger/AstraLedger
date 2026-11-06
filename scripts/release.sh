@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# scripts/release.sh — Veritoken release automation
+# scripts/release.sh — AstraLedger release automation
 #
 # Usage:
 #   bash scripts/release.sh <version>
@@ -100,7 +100,7 @@ NEW_UNRELEASED="## [Unreleased]
 "
 
 # Append the new comparison link to the bottom of the file
-REPO_URL="https://github.com/abore9769/Veritoken"
+REPO_URL="https://github.com/Muyideen-js/Veritoken"
 
 # Find the previous version by looking at the last [X.Y.Z] heading
 PREV_VERSION=$(grep -oP '(?<=## \[)[0-9]+\.[0-9]+\.[0-9]+(?=\])' "$CHANGELOG" | head -1 || echo "")

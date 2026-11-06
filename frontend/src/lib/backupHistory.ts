@@ -24,7 +24,7 @@ export interface BackupHistoryEntry {
   summary?: string;
 }
 
-const STORAGE_KEY = "veritoken-backup-history";
+const STORAGE_KEY = "astraledger-backup-history";
 const MAX_ENTRIES = 100;
 
 function loadEntries(): BackupHistoryEntry[] {

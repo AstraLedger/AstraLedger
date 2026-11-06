@@ -1,7 +1,7 @@
 /**
- * Typed event parsing for Veritoken contract events (#393).
+ * Typed event parsing for AstraLedger contract events (#393).
  *
- * Every Veritoken contract publishes events as `env.events().publish(topics,
+ * Every AstraLedger contract publishes events as `env.events().publish(topics,
  * data)`, where `topics` is `(Symbol, ...)` and `topics[0]` is the event
  * name. This module decodes a raw `rpc.Api.EventResponse` (or a batch of
  * them from `getEvents`) into a `ParsedEvent` whose `data` field is typed

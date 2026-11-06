@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Veritoken gas / performance report script
+# AstraLedger gas / performance report script
 # Measures CPU instructions and memory bytes for the main read-path contract
 # operations and writes the results to docs/gas-report.md.
 #
@@ -7,14 +7,14 @@
 #   bash scripts/gas-report.sh [identity] [network]
 #
 # Defaults:
-#   identity = veritoken-dev
+#   identity = astraledger-dev
 #   network  = testnet
 #
 # Contract IDs are read from frontend/.env (the file written by deploy.sh).
 # Override any ID by exporting the corresponding variable before running:
 #
 #   export VITE_KYC_REGISTRY_ID=C...
-#   bash scripts/gas-report.sh veritoken-dev testnet
+#   bash scripts/gas-report.sh astraledger-dev testnet
 #
 # Requirements:
 #   stellar CLI with --cost flag support (stellar-cli >= 20.0.0)
@@ -23,7 +23,7 @@
 
 set -euo pipefail
 
-IDENTITY="${1:-veritoken-dev}"
+IDENTITY="${1:-astraledger-dev}"
 NETWORK="${2:-testnet}"
 PROBE_ADDRESS="${PROBE_ADDRESS:-}"
 
@@ -56,7 +56,7 @@ fi
 SOURCE="--source-account $IDENTITY --network $NETWORK"
 TIMESTAMP="$(date -u '+%Y-%m-%dT%H:%M:%SZ')"
 
-echo "==> Veritoken gas report"
+echo "==> AstraLedger gas report"
 echo "    Network:  $NETWORK"
 echo "    Identity: $IDENTITY ($PROBE_ADDRESS)"
 echo "    KYC:      $KYC_ID"
@@ -212,10 +212,10 @@ cross-contract calls or additional storage reads were introduced.
 
 \`\`\`bash
 # After deploying to testnet
-bash scripts/gas-report.sh veritoken-dev testnet
+bash scripts/gas-report.sh astraledger-dev testnet
 
 # With a specific probe address (must have KYC approval)
-PROBE_ADDRESS=G... bash scripts/gas-report.sh veritoken-dev testnet
+PROBE_ADDRESS=G... bash scripts/gas-report.sh astraledger-dev testnet
 \`\`\`
 REPORT
 

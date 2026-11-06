@@ -1,4 +1,4 @@
-# Veritoken E2E test suite
+# AstraLedger E2E test suite
 
 Playwright browser tests for the frontend, running against a real, freshly
 deployed set of contracts on a local Stellar standalone node — not against
@@ -151,4 +151,4 @@ calling a `window.freighter` API surface, and that package talks to the real
 extension over an undocumented `postMessage` protocol. `vite.config.ts`
 aliases `@stellar/freighter-api` to `frontend/src/testing/freighterApiMock.ts`
 only in `--mode e2e`; that mock signs locally with whatever keypair
-`installFreighterWallet()` injected via `window.__VERITOKEN_E2E_WALLET__`.
+`installFreighterWallet()` injected via `window.__ASTRALEDGER_E2E_WALLET__`.

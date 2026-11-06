@@ -1,14 +1,14 @@
 {
-  "name": "@veritoken/sdk",
+  "name": "@astraledger/sdk",
   "version": "0.1.0",
-  "description": "TypeScript SDK for Veritoken smart contracts on Stellar Soroban",
+  "description": "TypeScript SDK for AstraLedger smart contracts on Stellar Soroban",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "homepage": "https://github.com/chidinma000/Veritoken/tree/main/sdk#readme",
+  "homepage": "https://github.com/Muyideen-js/Veritoken/tree/main/sdk#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chidinma000/Veritoken",
+    "url": "https://github.com/Muyideen-js/Veritoken",
     "directory": "sdk"
   },
   "versioningPolicy": "sdk/VERSIONING.md",
@@ -42,7 +42,7 @@
     "stellar",
     "soroban",
     "rwa",
-    "veritoken",
+    "astraledger",
     "kyc",
     "compliance"
   ],

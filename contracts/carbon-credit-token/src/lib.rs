@@ -244,7 +244,7 @@ impl CarbonCreditToken {
 
     pub fn name(env: Env) -> String {
         env.storage().instance().extend_ttl(THRESHOLD, BUMP);
-        String::from_str(&env, "Veritoken Carbon Credit")
+        String::from_str(&env, "AstraLedger Carbon Credit")
     }
     pub fn symbol(env: Env) -> String {
         env.storage().instance().extend_ttl(THRESHOLD, BUMP);

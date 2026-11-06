@@ -21,7 +21,7 @@ export type {
   Alert,
   AlertSeverity,
   AlertCategory,
-} from "@veritoken/sdk";
+} from "@astraledger/sdk";
 
 /** One recorded entry in the per-invoice state transition journal. */
 export interface JournalEntry {

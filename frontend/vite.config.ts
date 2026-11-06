@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       "@": "/src",
-      "@veritoken/sdk": fileURLToPath(
+      "@astraledger/sdk": fileURLToPath(
         new URL("../sdk/src/index.ts", import.meta.url),
       ),
       // E2E only: swap the real Freighter extension bridge for a local mock

@@ -1,6 +1,6 @@
 # Metadata Retention and Privacy Policy
 
-This document defines how Veritoken stores, retains, and handles metadata across its contracts and frontend. It is intended for maintainers, auditors, and end users.
+This document defines how AstraLedger stores, retains, and handles metadata across its contracts and frontend. It is intended for maintainers, auditors, and end users.
 
 ---
 
@@ -99,13 +99,13 @@ The frontend application stores the following in the user's browser only:
 | Address book entries | `localStorage` | Persisted until the user clears browser storage or removes entries |
 | Environment variables (`.env`) | Build-time configuration | Not persisted at runtime; not sent to any server |
 
-No user data is transmitted to any Veritoken-controlled server. The frontend communicates exclusively with the Stellar RPC endpoint configured via `VITE_STELLAR_RPC_URL`.
+No user data is transmitted to any AstraLedger-controlled server. The frontend communicates exclusively with the Stellar RPC endpoint configured via `VITE_STELLAR_RPC_URL`.
 
 ---
 
 ## Data Not Collected
 
-Veritoken contracts and the frontend **do not** collect or store:
+AstraLedger contracts and the frontend **do not** collect or store:
 
 - Full legal names of individual persons (only legal entity names for invoices and property)
 - National identification numbers, passport details, or government-issued IDs
@@ -133,7 +133,7 @@ For compliance workflows that require demonstrable erasure (e.g. GDPR right-to-e
 
 Users can clear all locally stored frontend data by:
 1. Removing entries from the in-app address book UI.
-2. Clearing `localStorage` for the Veritoken domain in their browser settings.
+2. Clearing `localStorage` for the AstraLedger domain in their browser settings.
 
 ### Export
 

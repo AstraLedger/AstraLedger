@@ -59,7 +59,7 @@ describe("sessionHistory store", () => {
 
   it("persists entries to sessionStorage under the expected key", () => {
     recordSessionAction("wallet", "Wallet connected");
-    const raw = sessionStorage.getItem("veritoken-session-history");
+    const raw = sessionStorage.getItem("astraledger-session-history");
     expect(raw).toBeTruthy();
     const parsed = JSON.parse(raw as string);
     expect(parsed.state.entries).toHaveLength(1);

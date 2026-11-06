@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Veritoken deployment script — Stellar Testnet
+# AstraLedger deployment script — Stellar Testnet
 # Usage: bash scripts/deploy.sh [identity-name]
 # Requires: stellar CLI, cargo, wasm32 target
 #

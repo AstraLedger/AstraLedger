@@ -1,8 +1,8 @@
-# Storage Patterns in Veritoken
+# Storage Patterns in AstraLedger
 
-This document explains how Veritoken contracts use Soroban's three storage tiers,
+This document explains how AstraLedger contracts use Soroban's three storage tiers,
 why each `DataKey` variant is placed in its tier, and where TTL bumps occur.  It
-is the authoritative reference for anyone forking Veritoken to build a new asset
+is the authoritative reference for anyone forking AstraLedger to build a new asset
 type.
 
 ---
@@ -25,7 +25,7 @@ ledger entry's TTL reaches zero the entry is **archived** (made inaccessible)
 and may later be **evicted** (deleted permanently).  To prevent data loss,
 contracts must call `extend_ttl` before an entry expires.
 
-Veritoken follows two conventions:
+AstraLedger follows two conventions:
 
 1. **Instance bump on every public entry-point** — the contract instance TTL is
    extended at the top of almost every `pub fn`, ensuring the instance stays live
@@ -50,7 +50,7 @@ redundant writes.
 
 If a key is never bumped — because no transaction reads or writes it for long
 enough — it will be archived.  Reading an archived key panics with a host error.
-The mitigations Veritoken uses are:
+The mitigations AstraLedger uses are:
 
 - Instance bump on every entry-point covers all instance keys automatically.
 - Persistent keys are bumped at write time; they must also be bumped on reads for
@@ -242,7 +242,7 @@ transfer) to force a bump if needed.
 
 ## Choosing a storage tier for a new asset type
 
-When forking Veritoken to build a new asset type, apply these rules:
+When forking AstraLedger to build a new asset type, apply these rules:
 
 1. **Use instance** for any value that is: (a) a single scalar or small struct,
    (b) read on nearly every transaction, and (c) should live exactly as long as

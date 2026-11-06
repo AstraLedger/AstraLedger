@@ -1,5 +1,5 @@
 {
-  "name": "veritoken-integration-tests",
+  "name": "astraledger-integration-tests",
   "version": "1.0.0",
   "private": true,
   "type": "module",

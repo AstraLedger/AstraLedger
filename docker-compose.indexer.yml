@@ -3,15 +3,15 @@ services:
   postgres:
     image: postgres:16-alpine
     environment:
-      POSTGRES_DB:       veritoken_indexer
-      POSTGRES_USER:     veritoken
-      POSTGRES_PASSWORD: veritoken
+      POSTGRES_DB:       astraledger_indexer
+      POSTGRES_USER:     astraledger
+      POSTGRES_PASSWORD: astraledger
     ports:
       - "5432:5432"
     volumes:
       - postgres-data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U veritoken -d veritoken_indexer"]
+      test: ["CMD-SHELL", "pg_isready -U astraledger -d astraledger_indexer"]
       interval: 5s
       timeout: 5s
       retries: 10
@@ -40,7 +40,7 @@ services:
     ports:
       - "3001:3001"
     environment:
-      DATABASE_URL:       postgres://veritoken:veritoken@postgres:5432/veritoken_indexer
+      DATABASE_URL:       postgres://astraledger:astraledger@postgres:5432/astraledger_indexer
       RPC_URL:            http://stellar:8000/soroban/rpc
       STELLAR_NETWORK:    standalone
       NETWORK_PASSPHRASE: "Standalone Network ; February 2017"

@@ -242,7 +242,7 @@ function fallbackTypeFile(contractName: string): string {
 // ── Main ──────────────────────────────────────────────────────────────────────
 
 function main() {
-  console.log("🔧  Veritoken type codegen starting…\n");
+  console.log("🔧  AstraLedger type codegen starting…\n");
 
   if (!existsSync(OUT_DIR)) {
     mkdirSync(OUT_DIR, { recursive: true });

@@ -38,8 +38,8 @@ The current Stellar CLI command and option reference is maintained in the
 Create and fund an identity, then use the existing operator entry point:
 
 ```bash
-bash scripts/setup-identity.sh veritoken-dev
-bash scripts/deploy.sh veritoken-dev
+bash scripts/setup-identity.sh astraledger-dev
+bash scripts/deploy.sh astraledger-dev
 ```
 
 `scripts/deploy.sh` still builds and validates the release artifacts first. It
@@ -73,19 +73,19 @@ python3 scripts/deployment_cli.py plan \
 Deploy prebuilt artifacts:
 
 ```bash
-DEPLOY_SKIP_BUILD=1 bash scripts/deploy.sh veritoken-dev
+DEPLOY_SKIP_BUILD=1 bash scripts/deploy.sh astraledger-dev
 ```
 
 Resume an interrupted deployment:
 
 ```bash
-DEPLOY_RESUME=1 bash scripts/deploy.sh veritoken-dev
+DEPLOY_RESUME=1 bash scripts/deploy.sh astraledger-dev
 ```
 
 Re-run verification without redeploying:
 
 ```bash
-bash scripts/verify-deployment.sh veritoken-dev
+bash scripts/verify-deployment.sh astraledger-dev
 ```
 
 The Python entry point exposes the same operations directly:
@@ -132,7 +132,7 @@ python3 scripts/deployment_cli.py simulate-upgrade \
   --contract compliance_engine \
   --new-artifact target/wasm32-unknown-unknown/release/compliance_engine.wasm \
   --to-schema-version 2 \
-  --identity veritoken-dev --network testnet
+  --identity astraledger-dev --network testnet
 ```
 
 The command exits non-zero and writes a JSON report (default
@@ -257,7 +257,7 @@ Resume only with the same identity, public source address, network, config
 hash, and local artifacts:
 
 ```bash
-DEPLOY_RESUME=1 bash scripts/deploy.sh veritoken-dev
+DEPLOY_RESUME=1 bash scripts/deploy.sh astraledger-dev
 ```
 
 Before reusing a deployed checkpoint record, the orchestrator queries its

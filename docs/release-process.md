@@ -1,6 +1,6 @@
 # Release Process
 
-This document describes how Veritoken releases are prepared, automated, and published.
+This document describes how AstraLedger releases are prepared, automated, and published.
 
 ---
 
@@ -30,7 +30,7 @@ GitHub Actions release.yml triggers on the tag
 
 ## Versioning Policy
 
-Veritoken uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html). Version numbers apply to the contract suite as a whole.
+AstraLedger uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html). Version numbers apply to the contract suite as a whole.
 
 | Change type | Bump |
 |---|---|

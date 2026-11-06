@@ -1,6 +1,6 @@
-# @veritoken/sdk
+# @astraledger/sdk
 
-TypeScript SDK for the Veritoken smart contract suite on Stellar Soroban. It
+TypeScript SDK for the AstraLedger smart contract suite on Stellar Soroban. It
 wraps every contract in a typed client, resolves network configuration
 (testnet / mainnet / futurenet / a local standalone node) from one place, and
 gives you a typed error model and event parser instead of raw Soroban XDR.
@@ -43,7 +43,7 @@ The fastest path from zero to a read: pick a network, build the client(s) you
 need, call a method.
 
 ```ts
-import { createClients } from "@veritoken/sdk";
+import { createClients } from "@astraledger/sdk";
 
 const { kycRegistry, rwaToken } = createClients({
   network: "testnet",
@@ -61,7 +61,7 @@ Writes take a `signTx: (xdr: string) => Promise<string>` callback — plug in
 Freighter, another wallet, or a `Keypair.sign` helper for scripts:
 
 ```ts
-import type { SignTx } from "@veritoken/sdk";
+import type { SignTx } from "@astraledger/sdk";
 
 const signTx: SignTx = async (xdr) => {
   const { signedTxXdr } = await signTransaction(xdr, { networkPassphrase });
@@ -89,9 +89,9 @@ from three layers, in priority order:
 3. **Built-in defaults** for the four known networks
 
 ```ts
-import { resolveNetworkConfig, createServer } from "@veritoken/sdk";
+import { resolveNetworkConfig, createServer } from "@astraledger/sdk";
 
-// Defaults to testnet unless VERITOKEN_NETWORK / STELLAR_NETWORK /
+// Defaults to testnet unless ASTRALEDGER_NETWORK / STELLAR_NETWORK /
 // VITE_STELLAR_NETWORK is set.
 const config = resolveNetworkConfig();
 const server = createServer(config);
@@ -113,10 +113,10 @@ const server = createServer({
 
 | Field                | Overrides via `resolveNetworkConfig({...})` | Env vars consulted (first match wins) |
 |-----------------------|----------------------------------------------|----------------------------------------|
-| `network`             | `network`                                    | `VERITOKEN_NETWORK`, `STELLAR_NETWORK`, `VITE_STELLAR_NETWORK` |
-| `rpcUrl`               | `rpcUrl`                                     | `VERITOKEN_RPC_URL`, `SOROBAN_RPC_URL`, `VITE_SOROBAN_RPC_URL` |
-| `networkPassphrase`    | `networkPassphrase`                          | `VERITOKEN_NETWORK_PASSPHRASE`, `STELLAR_NETWORK_PASSPHRASE`, `VITE_STELLAR_NETWORK_PASSPHRASE` |
-| `allowHttp`            | `allowHttp`                                  | `VERITOKEN_RPC_ALLOW_HTTP` (`"true"`/`"false"`) |
+| `network`             | `network`                                    | `ASTRALEDGER_NETWORK`, `STELLAR_NETWORK`, `VITE_STELLAR_NETWORK` |
+| `rpcUrl`               | `rpcUrl`                                     | `ASTRALEDGER_RPC_URL`, `SOROBAN_RPC_URL`, `VITE_SOROBAN_RPC_URL` |
+| `networkPassphrase`    | `networkPassphrase`                          | `ASTRALEDGER_NETWORK_PASSPHRASE`, `STELLAR_NETWORK_PASSPHRASE`, `VITE_STELLAR_NETWORK_PASSPHRASE` |
+| `allowHttp`            | `allowHttp`                                  | `ASTRALEDGER_RPC_ALLOW_HTTP` (`"true"`/`"false"`) |
 
 Validation runs on every call: an unknown network name without an explicit
 `rpcUrl` + `networkPassphrase` pair, an empty `rpcUrl` / `networkPassphrase`,
@@ -126,7 +126,7 @@ throw `InvalidNetworkConfigError` with a message that says exactly what's
 wrong — instead of failing later as an opaque RPC error.
 
 ```ts
-import { isValidNetwork, KNOWN_NETWORKS } from "@veritoken/sdk";
+import { isValidNetwork, KNOWN_NETWORKS } from "@astraledger/sdk";
 
 isValidNetwork("testnet"); // true
 isValidNetwork("devnet"); // false
@@ -155,10 +155,10 @@ const server = createServer({
 
 Custom networks default `allowHttp` to `false` (same safe-by-default rule
 built-in networks other than `standalone` use) — pass `allowHttp: true` (or
-set `VERITOKEN_RPC_ALLOW_HTTP=true`) for a plaintext local endpoint.
+set `ASTRALEDGER_RPC_ALLOW_HTTP=true`) for a plaintext local endpoint.
 Env-var overrides work identically to built-in networks — set
-`VERITOKEN_NETWORK=my-private-devnet` alongside `VERITOKEN_RPC_URL` and
-`VERITOKEN_NETWORK_PASSPHRASE` (or the `SOROBAN_RPC_URL`/`STELLAR_NETWORK_PASSPHRASE`/
+`ASTRALEDGER_NETWORK=my-private-devnet` alongside `ASTRALEDGER_RPC_URL` and
+`ASTRALEDGER_NETWORK_PASSPHRASE` (or the `SOROBAN_RPC_URL`/`STELLAR_NETWORK_PASSPHRASE`/
 `VITE_`-prefixed equivalents) to switch entirely via environment, no code
 changes required.
 
@@ -171,7 +171,7 @@ foundation the network config and generator below build on)
 sharing a single RPC server and network passphrase:
 
 ```ts
-import { createClients } from "@veritoken/sdk";
+import { createClients } from "@astraledger/sdk";
 
 const clients = createClients({
   network: "testnet",
@@ -185,7 +185,7 @@ const clients = createClients({
 when a missing client should be a loud error instead of `undefined`:
 
 ```ts
-import { ClientFactory } from "@veritoken/sdk";
+import { ClientFactory } from "@astraledger/sdk";
 
 const factory = new ClientFactory({ network: "testnet", contractIds: { rwaToken: "C..." } });
 const rwa = factory.get("rwaToken"); // throws a clear error if not configured
@@ -224,7 +224,7 @@ table is the map, not the territory.
 | `CarbonTokenClient` | `carbon-credit-token` | [src/clients/CarbonTokenClient.ts](src/clients/CarbonTokenClient.ts) | `mint`, `retire` (returns a `RetirementReceipt`), retirement history |
 
 ```ts
-import { KycRegistryClient, createServer, NETWORK_PASSPHRASES } from "@veritoken/sdk";
+import { KycRegistryClient, createServer, NETWORK_PASSPHRASES } from "@astraledger/sdk";
 
 const server = createServer("testnet");
 const kyc = new KycRegistryClient(contractId, server, NETWORK_PASSPHRASES.testnet);
@@ -242,7 +242,7 @@ Every contract emits numeric `#[contracterror]` codes. `errors.ts` gives you
 a lookup table and two ways to turn a thrown error into something readable:
 
 ```ts
-import { formatContractError, parseContractError } from "@veritoken/sdk";
+import { formatContractError, parseContractError } from "@astraledger/sdk";
 
 try {
   await kyc.approve(verifier, subject, 1, 0n, "US", signTx);
@@ -268,7 +268,7 @@ admin-transfer, KYC/compliance updates, ...). Unknown event names still
 decode — `data` is just untyped.
 
 ```ts
-import { parseEvents, filterByName } from "@veritoken/sdk";
+import { parseEvents, filterByName } from "@astraledger/sdk";
 
 const events = await server.getEvents({ ...opts });
 const parsed = parseEvents(events.events);
@@ -287,7 +287,7 @@ without a wallet or write access. All reads are simulated and safe to call
 from monitoring scripts or dashboards.
 
 ```ts
-import { createClients } from "@veritoken/sdk";
+import { createClients } from "@astraledger/sdk";
 
 const { complianceEngine, kycRegistry, rwaToken } = createClients({
   network: "testnet",
@@ -319,7 +319,7 @@ The base `ContractHealth` shape (from `checkHealth` in `health.ts`) is also
 exported for use in custom monitoring scripts:
 
 ```ts
-import { checkHealth } from "@veritoken/sdk";
+import { checkHealth } from "@astraledger/sdk";
 
 const health = await checkHealth(server, contractId, { lookbackLedgers: 500 });
 if (!health.reachable) console.error("Contract unreachable:", health.error);
@@ -354,7 +354,7 @@ pattern for a new gated method.
 contract failures, and confirmation timeouts without a live network:
 
 ```ts
-import { mockServer, simSuccess, simFailure } from "@veritoken/sdk/dist/testing/mockRpc.js";
+import { mockServer, simSuccess, simFailure } from "@astraledger/sdk/dist/testing/mockRpc.js";
 // (imported directly from source — see the note below)
 
 const server = mockServer({ simulateByMethod: { balance: simSuccess(encodeI128(100n)) } });
@@ -373,7 +373,7 @@ rejection).
 
 _Issue #399 — SemVer strategy_
 
-`@veritoken/sdk` follows [Semantic Versioning 2.0.0](https://semver.org). The
+`@astraledger/sdk` follows [Semantic Versioning 2.0.0](https://semver.org). The
 full policy — what counts as a breaking change, how breaking changes are
 communicated, and migration guides — is in [VERSIONING.md](VERSIONING.md).
 

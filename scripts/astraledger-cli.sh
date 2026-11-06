@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# veritoken — Unified CLI for Veritoken operations (#398)
+# astraledger — Unified CLI for AstraLedger operations (#398)
 #
 # Usage:
-#   bash scripts/veritoken-cli.sh <command> [args...]
-#   ./scripts/veritoken-cli.sh <command> [args...]
+#   bash scripts/astraledger-cli.sh <command> [args...]
+#   ./scripts/astraledger-cli.sh <command> [args...]
 #
 # Commands:
 #   setup      [--deploy] [--docker]          Bootstrap local dev environment
@@ -91,7 +91,7 @@ case "$COMMAND" in
         exec bash "$ADMIN_DIR/remove-verifier.sh" "$@"
         ;;
       *)
-        echo "Usage: veritoken-cli.sh kyc <approve|revoke|check|add-verifier|remove-verifier> [args...]"
+        echo "Usage: astraledger-cli.sh kyc <approve|revoke|check|add-verifier|remove-verifier> [args...]"
         exit 1
         ;;
     esac
@@ -122,13 +122,13 @@ case "$COMMAND" in
             exec bash "$ADMIN_DIR/remove-blocklist.sh" "$@"
             ;;
           *)
-            echo "Usage: veritoken-cli.sh compliance blocklist <add|remove> <address>"
+            echo "Usage: astraledger-cli.sh compliance blocklist <add|remove> <address>"
             exit 1
             ;;
         esac
         ;;
       *)
-        echo "Usage: veritoken-cli.sh compliance <pause|unpause|set-rules|blocklist> [args...]"
+        echo "Usage: astraledger-cli.sh compliance <pause|unpause|set-rules|blocklist> [args...]"
         exit 1
         ;;
     esac
@@ -166,7 +166,7 @@ case "$COMMAND" in
 
   *)
     echo "Unknown command: $COMMAND"
-    echo "Run 'bash scripts/veritoken-cli.sh help' for usage."
+    echo "Run 'bash scripts/astraledger-cli.sh help' for usage."
     exit 1
     ;;
 esac

@@ -18,7 +18,7 @@ services:
   # Runs cargo check to confirm the build environment is healthy on startup.
   # For a full build + deploy, exec into this container:
   #   docker compose exec contracts bash
-  #   bash scripts/deploy.sh veritoken-dev
+  #   bash scripts/deploy.sh astraledger-dev
   contracts:
     build:
       context: .
@@ -43,7 +43,7 @@ services:
     # Run a quick compile check on startup to confirm the toolchain is working.
     command: >
       bash -c "
-        echo '==> Veritoken contract toolchain ready' &&
+        echo '==> AstraLedger contract toolchain ready' &&
         cargo check --target wasm32v1-none --quiet &&
         echo '==> cargo check passed — container is healthy' &&
         tail -f /dev/null

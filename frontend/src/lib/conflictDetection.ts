@@ -37,7 +37,7 @@ export interface ConflictWarning {
 
 // ── Storage ───────────────────────────────────────────────────────────────────
 
-const STORAGE_KEY = "veritoken:pending_admin_actions";
+const STORAGE_KEY = "astraledger:pending_admin_actions";
 
 export function loadPendingActions(): PendingAdminAction[] {
   try {

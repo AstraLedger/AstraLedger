@@ -33,7 +33,7 @@ interface DraftStoreState {
   discardDraft: (flow: string) => void;
 }
 
-const STORAGE_KEY = "veritoken-drafts";
+const STORAGE_KEY = "astraledger-drafts";
 
 export const useDraftStore = create<DraftStoreState>()(
   persist(

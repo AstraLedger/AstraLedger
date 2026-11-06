@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compatibility entry point for the Veritoken deployment automation."""
+"""Compatibility entry point for the AstraLedger deployment automation."""
 
 from deployment.cli import main
 

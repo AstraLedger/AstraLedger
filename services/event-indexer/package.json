@@ -1,7 +1,7 @@
 {
-  "name": "veritoken-event-indexer",
+  "name": "astraledger-event-indexer",
   "version": "0.1.0",
-  "description": "Off-chain Soroban contract event indexer for Veritoken",
+  "description": "Off-chain Soroban contract event indexer for AstraLedger",
   "private": true,
   "type": "module",
   "scripts": {

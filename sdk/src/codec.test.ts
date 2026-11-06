@@ -246,7 +246,7 @@ describe("encodeInvoiceMeta", () => {
 describe("encodePropertyMeta", () => {
   const meta: PropertyMeta = {
     property_id: "PROP-NYC-001",
-    legal_name: "Veritoken NYC Holdings LLC",
+    legal_name: "AstraLedger NYC Holdings LLC",
     jurisdiction: "US",
     address: "123 Main St, New York, NY 10001",
     total_valuation_usd: 5_000_000n,
@@ -259,7 +259,7 @@ describe("encodePropertyMeta", () => {
   it("round-trips all fields", () => {
     const decoded = scValToNative(encodePropertyMeta(meta)) as PropertyMeta;
     expect(decoded.property_id).toBe("PROP-NYC-001");
-    expect(decoded.legal_name).toBe("Veritoken NYC Holdings LLC");
+    expect(decoded.legal_name).toBe("AstraLedger NYC Holdings LLC");
     expect(decoded.jurisdiction).toBe("US");
     expect(decoded.total_valuation_usd).toBe(5_000_000n);
     expect(decoded.total_shares).toBe(10_000n);

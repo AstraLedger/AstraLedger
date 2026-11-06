@@ -15,7 +15,7 @@ import {
   ClientFactory,
   type KycRegistryClient,
   type SignTx,
-} from "@veritoken/sdk";
+} from "@astraledger/sdk";
 
 // ── 1. Basic usage: build every configured client from one config object ──────
 
